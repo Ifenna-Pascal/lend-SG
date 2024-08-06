@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,6 +24,46 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+@font-face {
+  font-family: "Helvetica-neue";
+  src: url(./assets/fonts/helvetica-neue-5/HelveticaNeueBold.otf)
+    format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "sora";
+  src: url(./assets/fonts/sora-3/Sora-Regular.ttf) format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "sora";
+  src: url(./assets/fonts/sora-3/Sora-Light.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "sora";
+  src: url(./assets/fonts/sora-3/Sora-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "urbanist";
+  src: url(./assets/fonts/urbanist/Urbanist[wght].ttf) format("truetype");
+  font-weight: 400;
+}
+
+.font-helvatica {
+  font-family: "Helvatica-neue", sans-serif;
+}
+.font-sora {
+  font-family: "sora", sans-serif;
+}
+.font-urbanist {
+  font-family: "urbanist", sans-serif;
 }
 
 @layer utilities {
