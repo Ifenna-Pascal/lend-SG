@@ -8,7 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {},
+      backgroundImage: {
+        "hero-bg": "url('./assets/images/homapage/hero-bg.svg')",
+        "footer-bg": "url('./assets/images/homapage/footer-bg.svg')",
+      },
     },
   },
   plugins: [],
