@@ -5,6 +5,7 @@ import logo from "./../../assets/images/homapage/grouped-logo.svg";
 import Image from "next/image";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GiCancel } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -22,7 +23,7 @@ const NavBar = () => {
 
   return (
     <nav className="bg-[#060A14] px-[1rem] py-3  w-full md:px-[2rem] lg:px-8 fixed top-0 z-50">
-      <div className="max-w-[1200px] mx-auto ">
+      <div className="max-w-[2000px] mx-auto ">
         <div className="  flex justify-between items-center">
           <div className="w-20 md:w-28">
             <Image src={logo} alt="logo" className="" />
@@ -39,12 +40,13 @@ const NavBar = () => {
               FAQ
             </a>
           </div>
-
-          <div className="mr-[-8rem] md:mr-0">
-            <button className="bg-transparent border-2  font-sora text-[8px] md:text-[14px]  border-[#01F8AF] hover:bg-[#01F8AF] text-[#01F8AF] hover:text-black px-[10px] py-[4px] md:px-6 md:py-[7px] rounded-full text-md flex flex-row items-center gap-1">
-              Launch App
-            </button>
-          </div>
+          <Link to={"/dashboard/market"}>
+            <div className="mr-[-8rem] md:mr-0">
+              <button className="bg-transparent border-2  font-sora text-[8px] md:text-[14px]  border-[#01F8AF] hover:bg-[#01F8AF] text-[#01F8AF] hover:text-black px-[10px] py-[4px] md:px-6 md:py-[7px] rounded-full text-md flex flex-row items-center gap-1">
+                Launch App
+              </button>
+            </div>
+          </Link>
 
           <div className="md:hidden">
             <button

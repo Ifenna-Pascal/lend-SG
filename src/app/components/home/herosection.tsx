@@ -12,9 +12,9 @@ import Image from "next/image";
 const HeroSection = () => {
   return (
     <div className="  bg-[#030D0A] bg-cover bg-hero-bg bg-center px-3 bg-no-repeat bg-opacity-100   text-white  ">
-      <div className="max-w-[1200px]   mx-auto  py-[5rem] md:py-0  ">
+      <div className="max-w-[2000px]   mx-auto  py-[5rem] md:py-0  ">
         <div className="  flex flex-col md:flex-row items-center justify-center my-auto  ">
-          <div className=" max-w-[1200px] mx-auto my-auto py-5 ">
+          <div className=" max-w-[2000px] mx-auto my-auto py-5  xl:px-8 2xl:px-0">
             <h1 className="text-[30px] md:text-[50px] text-center md:text-left md:tracking-widest lg:tracking-[3.70px] leading-[36.9px] md:leading-[60px] lg:text-[54px] xl:text-[64px] lg:leading-[80.5px] xl:leading-[83px] font-sora font-bold w-full px-5 md:px-4 lg:px-8 md:w-[120%]  lg:w-[100%] xl:w-[80%]    xl:px-0 ">
               Supply, Borrow and Earn
             </h1>
