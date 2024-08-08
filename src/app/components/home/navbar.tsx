@@ -58,9 +58,6 @@ const NavBar = () => {
                   <GiCancel />
                 </div>
               ) : (
-                //   <div className="w-[78px] h-8 bg-neutral-200 rounded-[100px] justify-center items-center inline-flex">
-                // <div className="w-[42px] h-[22px] text-center text-gray-950 text-sm font-bold font-['Montserrat']">Close</div>
-                // </div>
                 <div className="text-3xl ">
                   <RxHamburgerMenu />
                 </div>

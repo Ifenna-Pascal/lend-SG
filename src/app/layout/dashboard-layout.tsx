@@ -4,7 +4,7 @@ import NavigationLayout from "./navigatiojn-layout";
 
 const DashboardLayout = () => {
   return (
-    <div className="bg-black pb-24 min-h-screen">
+    <div className="bg-black pb-24 min-h-screen w-full">
       <NavigationLayout />
       <br /> <br />
       <Outlet />
