@@ -6,7 +6,7 @@ import Button from "@/app/components/ui/button";
 
 const MarketDashboard = () => {
   return (
-    <div className="px-8 md:px-10  bg-gradient-to-t from-[#013B2A] to-[#030D0A] ">
+    <div className="px-4 md:px-10  bg-gradient-to-t from-[#013B2A] to-[#030D0A] ">
       <div className="max-w-[2000px]   mx-auto   py-[5rem] md:py-[0.5rem]  ">
         <div className="  flex flex-col  my-auto  ">
           <div className="py-0 md:py-12 mb-6">
@@ -54,9 +54,9 @@ const MarketDashboard = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-5">
+        <div className="md:hidden flex flex-col gap-5">
           <div className="flex justify-between items-center ">
-            <div className="w-2/4 flex  items-center rounded-md bg-[#013B2A] justify-between px-4 py-3">
+            <div className="w-2/4 flex  items-center rounded-md bg-[#013B2A] justify-between px-2 py-3">
               <div className="flex-col">
                 <div className="text-[8px] text-white">Total Market Size</div>
                 <div className="text-[10px] text-white">
