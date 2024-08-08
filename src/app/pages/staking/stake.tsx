@@ -9,21 +9,21 @@ export default function Stake() {
     <div>
       <div className="mx-auto flex items-center gap-5 shadow-lg rounded-[15px]  justify-between  py-10 px-3 md:px-8 lg:px-10 xl:px-20   ">
         <div className="bg-[#072018] rounded-[15px] border border-gray-400 py-4 px-4 text-left w-1/2">
-          <h1 className="font-sora text-gray-300 font-semibold text-[30px]/[37px]">
+          <h1 className="font-sora text-gray-300 font-semibold text-[16px]/[15px] md:[18px]/[18px] lg:[24px]/[18px] xl:text-[30px]/[37px]">
             Token Balance
           </h1>
           <div className="flex items-center gap-2 mt-5">
             <Image src={logo} alt="logo" className="w-6" />
-            <p className="text-gray-400 font-sora font-semibold text-[30px]/[37px] ">
+            <p className="text-gray-400 font-sora font-semibold text-[16px]/[15px] md:[18px]/[18px] lg:[24px]/[18px] xl:text-[30px]/[37px]">
               212.00
             </p>
           </div>
         </div>
         <div className="bg-[#072018] rounded-[15px] border border-gray-400 py-4 px-4 text-left w-1/2">
-          <h1 className="font-sora text-gray-300 font-semibold text-[30px]/[37px]">
+          <h1 className="font-sora text-gray-300 font-semibold text-[16px]/[15px] md:[18px]/[18px] lg:[24px]/[18px] xl:text-[30px]/[37px]  ">
             APY
           </h1>
-          <p className="text-gray-400 font-sora font-semibold text-[30px]/[37px] mt-5">
+          <p className="text-gray-400 font-sora font-semibold text-[16px]/[15px] md:[18px]/[18px] lg:[24px]/[18px] xl:text-[30px]/[37px] mt-5">
             33.64%
           </p>
         </div>
