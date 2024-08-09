@@ -37,13 +37,13 @@ const NavigationLayout = () => {
               <Image src={logo} alt="logo" className="" />
             </div>
           </Link>
-          <div className="hidden md:flex font-sora font-light space-x-[2rem]  ">
+          <div className="hidden md:flex font-sora font-light space-x-[0.5rem] md:space-x-[1rem] lg:space-x-[2rem]  ">
             {dashbaordLinks.map((link, index) => {
               const active = router.pathname.includes(link.href);
               return (
                 <Link to={link.href} key={index}>
                   <span
-                    className={`${active && "border-b border-[#01F8AF]"} pb-3 font-montserrat text-white font-semibold text-[10px]/[12px] lg:text-[16px]/[20px]`}
+                    className={`${active && "border-b border-[#01F8AF]"} pb-3 font-montserrat text-white font-semibold text-[10px]/[12px] md:text-[14px]/[15px] lg:text-[16px]/[20px]`}
                   >
                     {link.title}
                   </span>
