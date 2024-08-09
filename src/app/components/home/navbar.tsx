@@ -22,7 +22,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-[#060A14] px-[1rem] py-3  w-full md:px-[2rem] lg:px-8 fixed top-0 z-50">
+    <nav className="bg-[#010101] px-[1rem] py-3  w-full md:px-[2rem] opacity-70 lg:px-8 fixed top-0 z-50">
       <div className="max-w-[2000px] mx-auto ">
         <div className="  flex justify-between items-center">
           <div className="w-20 md:w-28">

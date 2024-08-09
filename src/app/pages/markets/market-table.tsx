@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { marketTable } from "../../__mockdata__/tables";
 import { images } from "../../utilities/images";
+import { Link } from "react-router-dom";
 
 const Table = () => {
   return (
@@ -88,10 +89,8 @@ const Table = () => {
             <tbody className="bg-transparent divide-y divide-[#FFFFFF1A]">
               {marketTable.map((data, index) => {
                 return (
-                  <tr
-                    key={index}
-                    className="hover:bg-[#FFFFFF0D] cursor-pointer"
-                  >
+                  <tr className="hover:bg-[#FFFFFF0D] cursor-pointer">
+                    {/* <Link className= "" key={index} to={`/dashboard/market/${index}`}> */}
                     <td className="px-2 py-7 whitespace-nowrap">
                       <div className="ml-4 flex items-center">
                         <Image src={data.icon} alt="coin-icon" />
@@ -122,6 +121,7 @@ const Table = () => {
                         {data.details}
                       </button>
                     </td>
+                    {/* </Link> */}
                   </tr>
                 );
               })}

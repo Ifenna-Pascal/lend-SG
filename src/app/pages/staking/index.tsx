@@ -7,7 +7,7 @@ const Staking = () => {
   return (
     <div className="px-5 md:px-10 lg:px-10 xl:px-20  ">
       <div className=" w-full  py-14">
-        <div className="mx-auto w-full   bg-[#181b19] shadow-xl  rounded-[15px] border border-gray-400 items-center">
+        <div className="mx-auto w-full   bg-[#000000] shadow-xl  rounded-[15px] border border-gray-400 items-center">
           <div className="mx-auto flex items-center gap-5 shadow-lg rounded-[15px]  justify-between  py-7 px-3 ">
             <div className="bg-[#072018] rounded-[15px] border border-gray-400 py-4  text-center w-1/2">
               <h1 className="font-sora text-gray-300 font-semibold text-[10px]/[15px] md:text-[18px]/[18px] lg:text-[24px]/[22px] xl:text-[30px]/[37px]">

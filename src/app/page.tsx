@@ -18,6 +18,7 @@ function Page() {
           <Route path="market" element={<MarketDashboard />} />
           <Route path="dapp" element={<Dashboard />} />
           <Route path="staking" element={<Staking />} />
+          {/* <Route path="market/:id" element={<Marketsingle />} /> */}
           <Route path="marketsingle" element={<Marketsingle />} />
         </Route>
       </Routes>
