@@ -31,11 +31,11 @@ const Docs = () => {
 
   return (
     <div className="  bg-[#030D0A]  bg-cover bg-center px-3  bg-opacity-100   text-white  ">
-      <div className="max-w-[1200px]  mx-auto  ">
+      <div className="max-w-[2000px]  mx-auto  ">
         <div
         //  className="md:h-screen  items-center justify-center mx-auto  "
         >
-          <div className=" max-w-[1200px] mx-auto  py-3 md:py-6">
+          <div className=" max-w-[2000px] mx-auto  py-3 md:py-6 xl:px-8">
             <h1 className="text-[20px]  md:text-[40px]  mt-3 md:mt-[-5rem] lg:mt-[-6rem] xl:mt-[-8rem] text-center md:text-left md:tracking-widest lg:tracking-[3.70px] leading-[26px] md:leading-[32px]  lg:text-[64px]  lg:leading-[46.5px] xl:leading-[54px]  font-sora text-[#01F8AF] font-bold w-full px-2 md:px-4 lg:px-5  xl:px-0 ">
               $ 234,429.22
             </h1>

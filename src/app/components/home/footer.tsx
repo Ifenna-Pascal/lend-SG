@@ -18,7 +18,7 @@ const Footer = () => {
         backgroundBlendMode: "lighten",
       }}
     >
-      <div className=" max-w-[1200px] mx-auto px-2 md:px-4  py-[2rem] md:py-[3rem]">
+      <div className=" max-w-[2000px] mx-auto px-2 md:px-4  py-[2rem] md:py-[3rem]">
         <div className="flex flex-col justify-around  md:flex-row  ">
           <div className="flex flex-col  space-y-2 w-full ">
             <div className="">

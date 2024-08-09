@@ -37,14 +37,14 @@ const Faq = () => {
   return (
     // <Wrapper>
     <div className="bg-[#030D0A] ">
-      <div className=" max-w-[1200px] mx-auto py-[1rem] md:py-[4px] xl:py-[4px]">
+      <div className=" max-w-[2000px] mx-auto py-[1rem] md:py-[4px] xl:py-[4px]">
         <h1 className="text-[#01F9AF] text-[16px] font-sora  text-center mt-[1rem] lg:mt-[5rem] 2xl:mt-[1rem] font-bold tracking-wide md:text-[32px] lg:text-[36px]">
           FAQ{" "}
         </h1>
         <h4 className="text-white text-[11px] font-helvatica  text-center  font-bold tracking-wide md:text-[32px] lg:text-[36px]">
           Dive into Our Dynamic{" "}
         </h4>
-        <div className="max-w-screen-lg mx-auto mt-4 mb-[3rem] md:mt-10 px-8 md:px-10">
+        <div className="max-w-[2000px]mx-auto mt-4 mb-[3rem] md:mt-10 px-8 md:px-10">
           {faqData.map((faq, index) => (
             <div
               key={index}
