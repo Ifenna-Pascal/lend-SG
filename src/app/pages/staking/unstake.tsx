@@ -7,8 +7,8 @@ import Button from "../../components/ui/button";
 export default function Unstake() {
   return (
     <div>
-      <div className="mx-auto flex items-center gap-5 shadow-lg rounded-[15px]  justify-between  py-10 px-3 md:px-8 lg:px-10 xl:px-20    ">
-        <div className="bg-[#072018] rounded-[15px] border border-gray-400 py-4 px-4 text-left w-1/2">
+      <div className="mx-auto flex items-center gap-5 shadow-lg rounded-[15px]  justify-around  px-9  mt-9">
+        <div className="bg-[#1A1A1A]  rounded-[15px] my-auto border border-white border-opacity-50 py-4 px-4 text-left  w-[368px] h-[123px]">
           <h1 className="font-sora text-gray-300 font-semibold text-[14px]/[15px] md:text-[18px]/[18px] lg:text-[24px]/[18px] xl:text-[30px]/[37px]">
             Token Balance
           </h1>
@@ -19,7 +19,7 @@ export default function Unstake() {
             </p>
           </div>
         </div>
-        <div className="bg-[#072018] rounded-[15px] border border-gray-400 py-4 px-4 text-left w-1/2">
+        <div className="bg-[#1A1A1A]  rounded-[15px] border border-white border-opacity-50 py-4 px-4 text-left  w-[368px] h-[123px]">
           <h1 className="font-sora text-gray-300 font-semibold text-[14px]/[15px] md:text-[18px]/[18px] lg:text-[24px]/[18px] xl:text-[30px]/[37px]">
             APY
           </h1>
@@ -28,8 +28,8 @@ export default function Unstake() {
           </p>
         </div>
       </div>
-      <div className="flex-col mx-auto bg-[#181b19] px-4 md:px-8 lg:px-10 xl:px-20 border-gray-400">
-        <div className="flex justify-between items-center text-md text-gray-300">
+      <div className="flex-col  justify-around mt-12 px-10 xl:px-24 ">
+        <div className="flex justify-between items-center text-md text-white text-opacity-70">
           <h5 className="font-sora text-[14px]/[15px] md:text-[18px]/[18px] lg:text-[24px]/[18px] xl:text-[26px]/[32px] font-meduim font-meduim">
             Stake Balance
           </h5>
@@ -37,7 +37,7 @@ export default function Unstake() {
             8.47 TP
           </h5>
         </div>
-        <div className="flex justify-between mt-6 items-center text-md text-gray-300">
+        <div className="flex justify-between mt-16 items-center text-md text-white text-opacity-70">
           <h5 className="font-sora text-[14px]/[15px] md:text-[18px]/[18px] lg:text-[24px]/[18px] xl:text-[26px]/[32px] font-meduim ">
             Rewards
           </h5>
@@ -45,34 +45,34 @@ export default function Unstake() {
             7.03 TP
           </h5>
         </div>
-        <div className="mt-8 mb-8 text-gray-500">
+        <div className="mt-14 mb-12 text-white text-opacity-20">
           <hr />
         </div>
-        <div className=" mx-auto flex  rounded-md bg-[#072018] border border-gray-400 justify-between  py-6 ">
-          <div className="text-white  flex-col px-6 cursor-pointer">
-            <h3 className="font-sora  text-[14px]/[15px] md:text-[18px]/[18px] lg:text-[24px]/[18px] xl:text-[26px]/[32px]]">
+        <div className=" mx-auto flex  rounded-md bg-[#1A1A1A]  border border-white border-opacity-50 text-white text-opacity-70 justify-between h-[180px] py-auto ">
+          <div className="text-white space-y-16  flex-col px-6 cursor-pointer mt-5">
+            <h6 className="font-sora font-bold text-white text-opacity-80  text-[14px]/[15px] md:text-[18px]/[18px] lg:text-[24px]/[18px] xl:text-[40px]/[32px]">
               0
-            </h3>
+            </h6>
 
-            <h6 className="font-sora font-bold text-gray-400 mt-5  text-[12px]/[15px] md:text-[16px]/[18px] lg:text-[20px]/[18px] xl:text-[24px]/[32px]">
+            <h6 className="font-sora font-light text-white text-opacity-80 mt-3 text-[14px]/[15px] md:text-[18px]/[18px] lg:text-[24px]/[18px] xl:text-[40px]/[32px]">
               $0.00
             </h6>
           </div>
-          <div className="text-white  flex-col px-6 cursor-pointer">
-            <div className="flex gap-3">
-              <Image src={logo} alt="logo" className="w-6" />
-              <h6 className="font-sora font-bold text-gray-400  text-[14px]/[15px] md:text-[18px]/[18px] lg:text-[24px]/[18px] xl:text-[26px]/[32px]">
+          <div className="text-white mt-2 flex-col px-6 cursor-pointer  ">
+            <div className="flex gap-3 mt-5 items-center">
+              <Image src={logo} alt="logo" className="w-10" />
+              <h6 className="font-sora font-bold text-white text-opacity-80  text-[14px]/[15px] md:text-[18px]/[18px] lg:text-[24px]/[18px] xl:text-[40px]/[32px]">
                 TP
               </h6>
             </div>
           </div>
         </div>
-        <div className=" mt-6  mb-9">
+        <div className=" flex  justify-around  mt-12  mb-9">
           <Button
             variant={"primary"}
-            className=" h-[50px] w-full text-[14px]/[15px] md:text-[18px]/[18px] lg:text-[24px]/[18px] xl:text-[30px]/[37px] font-sora font-semibold"
+            className="w-[895px]  h-[97px] text-[14px]/[15px] text-white text-opacity-30 hover:text-white md:text-[18px]/[18px] lg:text-[24px]/[18px] xl:text-[30px]/[37px] border border-[#00A675] hover:border hover:border-[#019267] bg-[#072018] bg-opacity-[49%] hover:bg-gradient-to-r from-[#019267] to-[#01F8AF] font-sora font-semibold"
           >
-            Unstake
+            Claim Reward
           </Button>
         </div>
       </div>
