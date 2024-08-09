@@ -31,10 +31,12 @@ import danger from "../assets/images/dashboard/danger.svg";
 import filter from "../assets/images/dashboard/filter.svg";
 import swap from "../assets/images/dashboard/swap.svg";
 import plus from "../assets/images/dashboard/plus.svg";
+import wallet from "../assets/images/dashboard/wallet.svg";
+import caution from "../assets/images/dashboard/caution.svg";
 
 export const images = {
   cancel,
-
+  wallet,
   metamask,
   danger,
   filter,
@@ -67,4 +69,5 @@ export const images = {
   asud,
   linker,
   swap,
+  caution,
 };

@@ -6,7 +6,7 @@ type ButtonType = ComponentProps<"button"> & ComponentProps<"a">;
 export interface BaseButtonProps extends ButtonType {}
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center rounded-[5px] font-poppins gap-2.5 font-outfit transition-colors disabled:pointer-events-none duration-300 font-medium disabled:cursor-not-allowed disabled:opacity-70",
+  "inline-flex items-center justify-center rounded-[5px] font-sora gap-2.5 font-outfit transition-colors disabled:pointer-events-none duration-300 font-medium disabled:cursor-not-allowed disabled:opacity-70",
   {
     variants: {
       variant: {

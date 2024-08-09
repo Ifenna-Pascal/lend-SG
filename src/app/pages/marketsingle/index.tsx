@@ -1,21 +1,41 @@
 import Image from "next/image";
 import { marketData } from "../../__mockdata__/market";
 import { images } from "../../utilities/images";
-import Table from "./market-table";
+import { GoArrowLeft } from "react-icons/go";
 import Button from "@/app/components/ui/button";
+import SingleTable from "./singletable";
 
-const MarketDashboard = () => {
+const Marketsingle = () => {
   return (
     <div className="px-4 md:px-10  bg-gradient-to-t from-[#013B2A] to-[#030D0A] ">
       <div className="max-w-[2000px]   mx-auto   py-[5rem] md:py-[0.5rem]  ">
         <div className="  flex flex-col  my-auto  ">
-          <div className="py-0 md:py-12 mb-6">
-            <h1 className="text-bold text-[14px]/[20px] md:text-[38px]/[40px] lg:text-[44px]/[20px] text-white font-sora font-regular">
-              Markets{" "}
-            </h1>
-            <h1 className="text-bold text-[24px]/[30px] md:text-[34px]/[30px] mt-4 lg:text-[54px]/[80px] text-[#01F8AF] font-sora font-bold">
-              Biturbo Market{" "}
-            </h1>
+          <div className=" flex items-center gap-2 py-0 md:py-10 mb-6">
+            <Button
+              variant={"primary"}
+              className="w-[80px] md:w-[100px] lg:w-[120px] h-[30px] font-sora font-light md:h-[35px] lg:h-[45px] text-[8px] md:text-[10px] lg:text-[15px]"
+            >
+              <GoArrowLeft /> Go Back
+            </Button>
+            <div className="flex items-center gap-2">
+              <Image
+                src={images.usdt}
+                width={14}
+                height={14}
+                alt="search-icon "
+                className="w-6 md:w-10 lg:w-15 bg-transparent"
+              />
+              <h1 className="text-bold text-[19px]/[30px] md:text-[24px]/[30px] lg:text-[28px] xl:text-[48px]/[60px]  text-white font-sora font-regular">
+                USDT
+              </h1>
+              <Image
+                src={images.wallet}
+                width={14}
+                height={14}
+                alt="search-icon"
+                className="w-3 md:w-6 lg:w-7"
+              />
+            </div>
           </div>
           <div className="hidden md:flex justify-between mb-6 items-center">
             <div className="w-2/3 flex items-center rounded-md bg-[#013B2A] justify-between  py-6 ">
@@ -56,7 +76,7 @@ const MarketDashboard = () => {
         </div>
         <div className="md:hidden flex flex-col gap-5">
           <div className="flex justify-between items-center ">
-            <div className="w-2/4 flex  items-center rounded-md bg-[#013B2A] justify-between px-2 py-3">
+            <div className="w-2/4 flex  items-center rounded-md bg-[#013B2A] shadow-lg justify-between px-2 py-3">
               <div className="flex-col">
                 <div className="text-[8px] text-white">Total Market Size</div>
                 <div className="text-[10px] text-white">
@@ -82,7 +102,7 @@ const MarketDashboard = () => {
           </div>
 
           <div className="flex justify-between items-center">
-            <div className="w-2/4 flex  items-center rounded-md bg-[#013B2A] justify-between px-4 py-3">
+            <div className="w-2/4 flex  items-center rounded-md bg-[#013B2A] shadow-md justify-between px-4 py-3">
               <div className="flex-col">
                 <div className="text-[8px] text-white">Total Borrows</div>
                 <div className="text-[10px] text-white">
@@ -103,10 +123,10 @@ const MarketDashboard = () => {
             </Button>
           </div>
         </div>
-        <Table />
+        <SingleTable />
       </div>
     </div>
   );
 };
 
-export default MarketDashboard;
+export default Marketsingle;

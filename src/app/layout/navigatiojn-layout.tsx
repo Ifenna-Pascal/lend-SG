@@ -43,7 +43,8 @@ const NavigationLayout = () => {
               return (
                 <Link to={link.href} key={index}>
                   <span
-                    className={`${active && "border-b border-[#01F8AF]"} pb-3 font-montserrat text-white font-semibold text-[10px]/[12px] md:text-[14px]/[15px] lg:text-[16px]/[20px]`}
+                    className={`${active && "border-b border-[#01F8AF]"} pb-3 font-montserrat text-white font-semibold text-[10px]/[12px] md:text-[14px]/[15px] lg:text-[14px] 
+                    xl:text-[16px]/[20px]`}
                   >
                     {link.title}
                   </span>
