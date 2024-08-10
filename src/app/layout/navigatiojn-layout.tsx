@@ -29,7 +29,7 @@ const NavigationLayout = () => {
   };
 
   return (
-    <nav className="bg-[#010101] px-[1rem] h-[38px] md:h-[53px] lg:h-[66px] md:py-2 lg:py-0 w-full md:px-[2rem]  border-b border-gray- lg:px-8 fixed top-0 z-50">
+    <nav className="bg-[#010101] px-[1rem] h-[48px] md:h-[53px] lg:h-[66px] py-2 md:py-2 lg:py-0 w-full md:px-[2rem]  border-b border-white border-opacity-50 lg:px-8 fixed top-0 z-50">
       <div className="max-w-[2000px] mx-auto flex justify-between ">
         <div className="  flex justify-between items-center gap-4">
           <Link to={"/"}>
@@ -53,7 +53,7 @@ const NavigationLayout = () => {
             })}
           </div>
         </div>
-        <div className="flex items-center justify-around gap-4">
+        <div className="flex items-center justify-around gap-2">
           <div className="flex items-center gap-x-1">
             <Button
               variant={"primary"}
@@ -61,12 +61,7 @@ const NavigationLayout = () => {
               onClick={() => setOpen(true)}
             >
               <div className="border border-gradient-to-r from-[#269981] to-[#142D44] rounded-full">
-                <Image
-                  src={images.eth}
-                  width={18}
-                  height={18}
-                  alt="coin border border-gradient-to-r from-[#269981] to-[#142D44]"
-                />
+                <Image src={images.eth} width={18} height={18} alt="coin " />
               </div>
               Switch tokens
               <Image src={images.swap} width={16} height={16} alt="switch" />
@@ -90,7 +85,7 @@ const NavigationLayout = () => {
             </Button>
             <Button
               variant={"primary"}
-              className="w-[73px] md:w-[100px] lg:w-[134px] h-[15px] md:h-[30px] border-none rounded-[3px] lg:rounded-[5px]   bg-gradient-to-r from-[#4BD5A8] to-[#007E2D] lg:h-[40px] text-white text-[7px] md:text-[10px] lg:text-[14px]"
+              className="w-[65px] md:w-[100px] lg:w-[134px] h-[15px] md:h-[30px] border-none rounded-[3px] lg:rounded-[5px]   bg-gradient-to-r from-[#4BD5A8] to-[#007E2D] lg:h-[40px] text-white text-[5px] md:text-[10px] lg:text-[14px]"
               onClick={() => setOpen(true)}
             >
               Connect Wallet
@@ -104,8 +99,8 @@ const NavigationLayout = () => {
               {isXIcon ? (
                 <div className="2xl">x</div>
               ) : (
-                <div className=" ">
-                  <RxHamburgerMenu className="w-[16px] h-[13px]" />
+                <div className=" bg-[#030D0A] h-[24px] w-[27px] items-center justify-center flex my-auto border-[#FFFFFF] border-opacity-10 ">
+                  <RxHamburgerMenu className="w-[16px] h-[10px] " />
                 </div>
               )}
             </button>

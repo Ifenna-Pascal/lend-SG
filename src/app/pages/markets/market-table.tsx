@@ -5,18 +5,18 @@ import { Link } from "react-router-dom";
 
 const Table = () => {
   return (
-    <div className="overflow-x-auto py-6">
-      <div className="border border-[#030D0A] bg-[#030D0A] shadow-md min-h-[400px] rounded-[10px]">
-        <h3 className="text-white mt-6 text-[16px] md:text-[25px] lg:text-[30px] font-sora font-regular px-6">
+    <div className="overflow-x-auto  px-4 md:px-10 py-10 bg-[#01291D] ">
+      <div className="border border-white border-opacity-10 bg-[#030D0A] shadow-md min-h-[400px] rounded-[10px]">
+        <h3 className="text-white mt-6 text-[14px] md:text-[25px] xl:text-[30px] font-sora font-semibold px-6">
           Biturbo Market Assets
         </h3>
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <table className=" min-w-full divide-y font-sora  divide-[#FFFFFF1A] ">
             <thead className="bg-transparent">
               <tr className="h-[85px]">
                 <th
                   scope="col"
-                  className="px-6 py-5  text-left text-[10px]/[15px] md:text-[10px]/[15px] lg:text-[18px]/[21px] font-sora text-gray-400 text-light-200 font-semibold"
+                  className="px-6 py-5  text-left text-[10px]/[15px] md:text-[10px]/[15px] lg:text-[14px]/[18px] xl:text-[16px]/[20px] font-sora text-white text-opacity-60 font-semibold"
                 >
                   <div className="flex items-center">
                     <span>Assets</span>
@@ -30,7 +30,7 @@ const Table = () => {
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-5 text-left text-[10px]/[15px] md:text-[10px]/[15px] lg:text-[18px]/[21px] font-sora text-gray-400 text-light-200 font-semibold"
+                  className="px-6 py-5  text-left text-[10px]/[15px] md:text-[10px]/[15px] lg:text-[14px]/[18px] xl:text-[16px]/[20px] font-sora text-white text-opacity-60 font-semibold"
                 >
                   <div className="flex items-center">
                     <span>Total Supplied</span>
@@ -44,7 +44,7 @@ const Table = () => {
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-5 text-left text-[10px]/[15px] md:text-[10px]/[15px] lg:text-[16px]/[21px] xl:text-[18px]/[21px] font-sora text-gray-400 text-light-200 font-semibold"
+                  className="px-6 py-5  text-left text-[10px]/[15px] md:text-[10px]/[15px] lg:text-[14px]/[18px] xl:text-[16px]/[20px] font-sora text-white text-opacity-60 font-semibold"
                 >
                   <div className="flex items-center">
                     <span>Supply APY</span>
@@ -58,7 +58,7 @@ const Table = () => {
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-5 text-left text-[10px]/[15px] md:text-[10px]/[15px] lg:text-[18px]/[21px] font-sora text-gray-400 text-light-200 font-semibold"
+                  className="px-6 py-5  text-left text-[10px]/[15px] md:text-[10px]/[15px] lg:text-[14px]/[18px] xl:text-[16px]/[20px] font-sora text-white text-opacity-60 font-semibold"
                 >
                   <div className="flex items-center">
                     <span>Total Borrowed</span>
@@ -72,7 +72,7 @@ const Table = () => {
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-5 text-left text-[10px]/[15px] md:text-[10px]/[15px] lg:text-[18px]/[21px] font-sora text-gray-400 text-light-200 font-semibold"
+                  className="px-6 py-5  text-left text-[10px]/[15px] md:text-[10px]/[15px] lg:text-[14px]/[18px] xl:text-[16px]/[20px] font-sora text-white text-opacity-60 font-semibold"
                 >
                   <div className="flex items-center">
                     <span>Borrow APY, Variable</span>
@@ -94,30 +94,34 @@ const Table = () => {
                     <td className="px-2 py-7 whitespace-nowrap">
                       <div className="ml-4 flex items-center">
                         <Image src={data.icon} alt="coin-icon" />
-                        <div className=" text-[12px]/[15px] lg:text-[16px]/[21px] ml-3 font-sora text-white">
+                        <div className=" text-[12px]/[15px] lg:text-[18px]/[21px] ml-3 font-sora text-white">
                           {data.name}
                         </div>
                       </div>
                     </td>
-                    <td className="px-6 py-7 whitespace-nowrap">
-                      <div className="text-[12px]/[15px] lg:text-[16px]/[21px] font-sora text-white ">
+                    <td className="px-10 py-7 whitespace-nowrap">
+                      <div className="text-[12px]/[15px] font-normal  lg:text-[18px]/[21px] font-sora text-white ">
                         {data.collateral}
                       </div>
                     </td>
-                    <td className="px-6 py-7 whitespace-nowrap">
-                      <span className="text-[12px]/[15px] lg:text-[16px]/[21px]font-sora text-white ">
+                    <td className="px-10 py-7 whitespace-nowrap">
+                      <div className="text-[12px]/[15px] font-normal  lg:text-[18px]/[21px] font-sora text-white ">
                         {data.tvl}
-                      </span>
+                      </div>
                     </td>
-                    <td className="text-[12px]/[15px] lg:text-[16px]/[21px] px-6 py-7 font-sora text-white ">
-                      {data.mcr}
+                    <td className="px-10 py-7 whitespace-nowrap">
+                      <div className="text-[12px]/[15px] font-normal ml-3 lg:text-[18px]/[21px] font-sora text-white ">
+                        {data.mcr}
+                      </div>
                     </td>
-                    <td className="text-[12px]/[15px] lg:text-[16px]/[21px] px-6 py-7 pl-12 font-sora text-white ">
-                      {data.apr}
+                    <td className="px-10 py-7 whitespace-nowrap">
+                      <div className="text-[12px]/[15px] font-normal ml-6  lg:text-[18px]/[21px] font-sora text-white ">
+                        {data.apr}
+                      </div>
                     </td>
-                    <td className="text-[12px]/[15px] lg:text-[16px]/[21px] px-6 py-7 pl-12 font-sora  text-white ">
+                    <td className="text-[12px]/[15px] font-normal text-center lg:text-[18px]/[21px] px-8 py-7 ">
                       {" "}
-                      <button className="bg-[#082a20] text-gray-400 border border-gray-500 w-20  py-1 rounded-[5px]">
+                      <button className="bg-[#FFFFFF1A]  w-[99px] bg-opacity-10 border border-white border-opacity-10 h-[41px]  font-sora  text-white text-opacity-60  py-1 rounded-[5px]">
                         {data.details}
                       </button>
                     </td>
@@ -127,9 +131,16 @@ const Table = () => {
               })}
             </tbody>
           </table>
+          <div className="flex items-center  min-w-full border border-t-[#FFFFFF1A] py-8 border-b-[#FFFFFF1A] border-l-[#FFFFFF1A] border-r-[#FFFFFF1A] border-opacity-10">
+            <h3 className="text-white text-opacity-70  text-[14px] md:text-[22px] xl:text-[26px]/[32px] font-sora font-normal px-6">
+              Show Frozen or Paused Assets
+            </h3>
+            <div className="w-[27px] h-[24px] bg-white rounded-[5px]"></div>
+            <div className="w-[27px] h-[24px] bg-[#01291D] rounded-r-[5px]"></div>
+          </div>
         </div>
         <div className="">
-          <div className="md:hidden flex flex-col px-3  mb-9">
+          <div className="lg:hidden flex flex-col px-3  mb-9">
             {marketTable.map((data, index) => {
               return (
                 <div
