@@ -29,21 +29,22 @@ const NavigationLayout = () => {
   };
 
   return (
-    <nav className="bg-[#060A14] px-[1rem] py-3  w-full md:px-[2rem] lg:px-8 fixed top-0 z-50">
+    <nav className="bg-[#010101] px-[1rem] h-[48px] md:h-[53px] lg:h-[66px] py-2 md:py-2 lg:py-0 w-full md:px-[2rem]  border-b border-white border-opacity-50 lg:px-8 fixed top-0 z-50">
       <div className="max-w-[2000px] mx-auto flex justify-between ">
         <div className="  flex justify-between items-center gap-4">
           <Link to={"/"}>
-            <div className="w-20 md:w-28">
+            <div className="w-[80px] h-[34px] lg:w-[151px] lg:h-[64px]">
               <Image src={logo} alt="logo" className="" />
             </div>
           </Link>
-          <div className="hidden md:flex font-sora font-light space-x-[2rem]  ">
+          <div className="hidden md:flex font-sora font-light space-x-[0.5rem] md:space-x-[1rem] lg:space-x-[2rem]  ">
             {dashbaordLinks.map((link, index) => {
               const active = router.pathname.includes(link.href);
               return (
                 <Link to={link.href} key={index}>
                   <span
-                    className={`${active && "border-b border-[#01F8AF]"} pb-3 font-montserrat text-white font-semibold text-[10px]/[12px] lg:text-[16px]/[20px]`}
+                    className={`${active ? "border-b-2 border-[#01F8AF] pb-[15px] lg:pb-[22px]" : "pb-3"} pb-3 font-montserrat text-white font-semibold text-[10px]/[12px] md:text-[12px]/[15px] lg:text-[14px] 
+                   xl:text-[16px]/[20px]`}
                   >
                     {link.title}
                   </span>
@@ -52,29 +53,39 @@ const NavigationLayout = () => {
             })}
           </div>
         </div>
-        <div className="flex items-center justify-around gap-4">
+        <div className="flex items-center justify-around gap-2">
           <div className="flex items-center gap-x-1">
             <Button
               variant={"primary"}
-              className="hidden lg:flex w-[120px] lg:w-[190px] h-[45px] text-[8px] md:text-[12px] lg:text-[15px]"
+              className="hidden lg:flex md:w-[160px] lg:w-[179px] bg-[#1A1A1A] border border-[#FFFFFF] border-opacity-10 h-[41px] text-[8px] md:text-[12px] lg:text-[15px]"
               onClick={() => setOpen(true)}
             >
-              <Image src={images.eth} width={19} height={40} alt="coin" />
+              <div className="border border-gradient-to-r from-[#269981] to-[#142D44] rounded-full">
+                <Image src={images.eth} width={18} height={18} alt="coin " />
+              </div>
               Switch tokens
-              <Image src={images.swap} width={19} height={40} alt="switch" />
+              <Image src={images.swap} width={16} height={16} alt="switch" />
             </Button>
             <Button
               variant={"primary"}
-              className="flex lg:hidden w-[50px] md:w-[70px] lg:w-[190px] h-[30px] md:h-[35px] lg:h-[45px] text-[8px] md:text-[12px] lg:text-[15px]"
+              className="flex lg:hidden w-[35px] md:w-[45px] border border-[#FFFFFF] border-opacity-10  h-[15px] md:h-[29px]  text-[8px] md:text-[12px] lg:text-[15px]"
               onClick={() => setOpen(true)}
             >
-              <Image src={images.eth} alt="coin" className="w-4 lg:w-36" />
+              <Image
+                src={images.eth}
+                alt="coin"
+                className="w-[8px] h-[8px] md:w-[13px] md:h-[13px] "
+              />
 
-              <Image src={images.swap} alt="switch" className="w-4 lg:w-36" />
+              <Image
+                src={images.swap}
+                alt="switch"
+                className="w-[9px] h-[9px] md:w-[15px] md:h-[15px] "
+              />
             </Button>
             <Button
               variant={"primary"}
-              className="w-[90px] md:w-[130px] lg:w-[190px] h-[30px] md:h-[35px] lg:h-[45px] text-[8px] md:text-[10px] lg:text-[15px]"
+              className="w-[65px] md:w-[100px] lg:w-[134px] h-[15px] md:h-[30px] border-none rounded-[3px] lg:rounded-[5px]   bg-gradient-to-r from-[#4BD5A8] to-[#007E2D] lg:h-[40px] text-white text-[5px] md:text-[10px] lg:text-[14px]"
               onClick={() => setOpen(true)}
             >
               Connect Wallet
@@ -88,8 +99,8 @@ const NavigationLayout = () => {
               {isXIcon ? (
                 <div className="2xl">x</div>
               ) : (
-                <div className="text-3xl ">
-                  <RxHamburgerMenu />
+                <div className=" bg-[#030D0A] h-[24px] w-[27px] items-center justify-center flex my-auto border-[#FFFFFF] border-opacity-10 ">
+                  <RxHamburgerMenu className="w-[16px] h-[10px] " />
                 </div>
               )}
             </button>

@@ -22,31 +22,32 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-[#060A14] px-[1rem] py-3  w-full md:px-[2rem] lg:px-8 fixed top-0 z-50">
+    <nav className="bg-[#010101] px-[1rem] py-3  w-full md:px-[2rem] opacity-70 lg:px-8 fixed top-0 z-50">
       <div className="max-w-[2000px] mx-auto ">
         <div className="  flex justify-between items-center">
           <div className="w-20 md:w-28">
             <Image src={logo} alt="logo" className="" />
           </div>
-
-          <div className="hidden md:flex font-sora font-light space-x-[4rem]  ">
-            <a href="#hero" className="text-white text-[16px] ">
-              Home
-            </a>
-            <a href="#doc" className="text-white ext-[16px] ">
-              Docs
-            </a>
-            <a href="#faq" className="text-white ext-[16px] ">
-              FAQ
-            </a>
-          </div>
-          <Link to={"/dashboard/market"}>
-            <div className="mr-[-8rem] md:mr-0">
-              <button className="bg-transparent border-2  font-sora text-[8px] md:text-[14px]  border-[#01F8AF] hover:bg-[#01F8AF] text-[#01F8AF] hover:text-black px-[10px] py-[4px] md:px-6 md:py-[7px] rounded-full text-md flex flex-row items-center gap-1">
-                Launch App
-              </button>
+          <div className="flex items-center justify-between space-x-[4rem] xl:space-x-[10rem]">
+            <div className="hidden md:flex font-sora font-light md:space-x-[2rem] lg:space-x-[4rem]  ">
+              <a href="#hero" className="text-white text-[16px] ">
+                Home
+              </a>
+              <a href="#doc" className="text-white text-[16px] ">
+                Docs
+              </a>
+              <a href="#faq" className="text-white text-[16px] ">
+                FAQ
+              </a>
             </div>
-          </Link>
+            <Link to={"/dashboard/market"}>
+              <div className="mr-[-8rem] md:mr-0">
+                <button className="bg-transparent border-2  font-sora text-[8px] md:text-[14px]  border-[#01F8AF] hover:bg-[#01F8AF] text-[#01F8AF] hover:text-black px-[10px] py-[4px] md:px-6 md:py-[7px] rounded-full text-md flex flex-row items-center gap-1">
+                  Launch App
+                </button>
+              </div>
+            </Link>
+          </div>
 
           <div className="md:hidden">
             <button

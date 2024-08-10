@@ -1,6 +1,12 @@
 "use client";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { HomePage, MarketDashboard, Dashboard, Staking } from "./pages";
+import {
+  HomePage,
+  MarketDashboard,
+  Dashboard,
+  Staking,
+  Marketsingle,
+} from "./pages";
 import DashboardLayout from "./layout/dashboard-layout";
 
 function Page() {
@@ -12,9 +18,8 @@ function Page() {
           <Route path="market" element={<MarketDashboard />} />
           <Route path="dapp" element={<Dashboard />} />
           <Route path="staking" element={<Staking />} />
-          {/* <Route path="withdrawal" element={<Withdrawal />} />
-      <Route path="repay" element={<Repay />} />
-      <Route path="borrow" element={<Borrow />} /> */}
+          {/* <Route path="market/:id" element={<Marketsingle />} /> */}
+          <Route path="marketsingle" element={<Marketsingle />} />
         </Route>
       </Routes>
     </Router>
