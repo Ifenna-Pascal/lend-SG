@@ -33,6 +33,8 @@ import swap from "../assets/images/dashboard/swap.svg";
 import plus from "../assets/images/dashboard/plus.svg";
 import wallet from "../assets/images/dashboard/wallet.svg";
 import caution from "../assets/images/dashboard/caution.svg";
+import colleteral from "../assets/images/dashboard/colleteral.svg";
+import hide from "../assets/images/dashboard/hide.svg";
 
 export const images = {
   cancel,
@@ -70,4 +72,6 @@ export const images = {
   linker,
   swap,
   caution,
+  colleteral,
+  hide,
 };

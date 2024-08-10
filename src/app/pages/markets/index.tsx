@@ -7,13 +7,13 @@ import Button from "@/app/components/ui/button";
 const MarketDashboard = () => {
   return (
     <div className="">
-      <div className="max-w-[2000px]  px-4 md:px-10   bg-[#030D0A] font-sora h-[200px] md:h-[307px]  mx-auto   py-[1rem] md:py-[0.5rem]   ">
+      <div className="max-w-[2000px]  px-4 md:px-10   bg-[#030D0A] font-sora h-[185px] md:h-[307px]  mx-auto   py-[1rem] md:py-[0.5rem]   ">
         <div className="  flex flex-col  my-auto  ">
           <div className="py-0 md:py-8 ">
             <h1 className="block lg:hidden text-bold text-[14px]/[20px] md:text-[28px]/[40px] lg:text-[34px]/[20px] text-white font-sora font-regular">
               Markets{" "}
             </h1>
-            <h1 className="text-bold text-[24px]/[30px] md:text-[34px]/[30px] mt-0 xl:mt-4 lg:text-[54px]/[80px] xl:text-[64px]/[80px] text-[#01F8AF] font-sora font-bold">
+            <h1 className="text-bold text-[24px]/[30px] md:text-[34px]/[30px] mt-1 xl:mt-4 lg:text-[54px]/[80px] xl:text-[64px]/[80px] text-[#01F8AF] font-sora font-bold">
               Biturbo Market{" "}
             </h1>
           </div>
@@ -54,7 +54,7 @@ const MarketDashboard = () => {
             </div>
           </div>
         </div>
-        <div className="lg:hidden flex flex-col gap-5">
+        <div className="lg:hidden flex flex-col gap-2 mt-2">
           <div className="flex justify-between items-center ">
             <div className="w-[169px] md:w-[60%] h-[42px] md:h-[60px] flex  items-center rounded-md bg-[#013B2A] justify-between px-4 md:px-6">
               <div className="flex-col">
@@ -80,7 +80,7 @@ const MarketDashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[40px] h-[10px] relative flex items-center justify-center  rounded-[4px] border border-light-400  py-[15px]">
+            <div className="w-[40px] h-[10px] relative flex items-center justify-center  border border-white border-opacity-30 rounded-[4px]  py-[15px]">
               <Image
                 src={images.searchIcon}
                 width={14}
@@ -116,7 +116,7 @@ const MarketDashboard = () => {
 
             <Button
               variant={"primary"}
-              className="w-[110px] md:w-[130px] lg:w-[190px] h-[30px] md:h-[35px] lg:h-[45px] text-[8px] md:text-[10px] lg:text-[15px]"
+              className="w-[110px] md:w-[130px] lg:w-[190px] h-[30px] md:h-[35px] lg:h-[45px]  border border-white border-opacity-30 text-[8px] md:text-[10px] lg:text-[15px]"
             >
               View Transactions
             </Button>
