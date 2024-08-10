@@ -67,10 +67,10 @@ export default function Unstake() {
             </div>
           </div>
         </div>
-        <div className=" flex  justify-between  mt-12  mb-9">
+        <div className=" w-full  mt-12  mb-9">
           <Button
             variant={"primary"}
-            className="lg:w-[320px] xl:w-[405px] lg:h-[80px] h-[60px] xl:h-[97px] text-[14px]/[15px] text-white text-opacity-30 hover:text-white md:text-[18px]/[18px] lg:text-[24px]/[18px] xl:text-[36px]/[37px] border border-[#00A675] hover:border hover:border-[#019267] bg-[#072018] bg-opacity-[49%] hover:bg-gradient-to-r from-[#019267] to-[#01F8AF] font-sora font-semibold"
+            className=" lg:h-[80px] w-full h-[60px] xl:h-[97px] text-[14px]/[15px] text-white text-opacity-30 hover:text-white md:text-[18px]/[18px] lg:text-[24px]/[18px] xl:text-[36px]/[37px] border border-[#00A675] hover:border hover:border-[#019267] bg-[#072018] bg-opacity-[49%] hover:bg-gradient-to-r from-[#019267] to-[#01F8AF] font-sora font-semibold"
           >
             Unstake
           </Button>
