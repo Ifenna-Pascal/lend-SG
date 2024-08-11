@@ -28,13 +28,13 @@ const Table = () => {
               <tr className="h-[85px]">
                 <th
                   scope="col"
-                  className="px-6 py-5  text-left text-[10px]/[15px] md:text-[10px]/[15px] lg:text-[14px]/[18px] xl:text-[16px]/[20px] font-sora text-white text-opacity-60 font-semibold"
+                  className="px-6 py-5  text-left text-[10px]/[15px] md:text-[10px]/[15px] lg:text-[12px]/[18px] xl:text-[16px]/[20px] font-sora text-white text-opacity-60 font-semibold"
                 >
                   <div className="flex items-center">
                     <span>Assets</span>
                     <Image
                       src={images.colleteral}
-                      className="ml-2"
+                      className="ml-2 w-[10px] xl:w-[12px]"
                       alt="sort-icon"
                       width={12}
                     />
@@ -42,13 +42,13 @@ const Table = () => {
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-5  text-left text-[10px]/[15px] md:text-[10px]/[15px] lg:text-[14px]/[18px] xl:text-[16px]/[20px] font-sora text-white text-opacity-60 font-semibold"
+                  className="px-6 py-5  text-left text-[10px]/[15px] md:text-[10px]/[15px] lg:text-[12px]/[18px] xl:text-[16px]/[20px] font-sora text-white text-opacity-60 font-semibold"
                 >
                   <div className="flex items-center">
                     <span>Total Supplied</span>
                     <Image
                       src={images.colleteral}
-                      className="ml-2"
+                      className="ml-2 w-[10px] xl:w-[12px]"
                       alt="sort-icon"
                       width={12}
                     />
@@ -56,13 +56,13 @@ const Table = () => {
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-5  text-left text-[10px]/[15px] md:text-[10px]/[15px] lg:text-[14px]/[18px] xl:text-[16px]/[20px] font-sora text-white text-opacity-60 font-semibold"
+                  className="px-6 py-5  text-left text-[10px]/[15px] md:text-[10px]/[15px] lg:text-[12px]/[18px] xl:text-[16px]/[20px] font-sora text-white text-opacity-60 font-semibold"
                 >
                   <div className="flex items-center">
                     <span>Supply APY</span>
                     <Image
                       src={images.colleteral}
-                      className="ml-2"
+                      className="ml-2 w-[10px] xl:w-[12px]"
                       alt="sort-icon"
                       width={12}
                     />
@@ -70,13 +70,13 @@ const Table = () => {
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-5  text-left text-[10px]/[15px] md:text-[10px]/[15px] lg:text-[14px]/[18px] xl:text-[16px]/[20px] font-sora text-white text-opacity-60 font-semibold"
+                  className="px-6 py-5  text-left text-[10px]/[15px] md:text-[10px]/[15px] lg:text-[12px]/[18px] xl:text-[16px]/[20px] font-sora text-white text-opacity-60 font-semibold"
                 >
                   <div className="flex items-center">
                     <span>Total Borrowed</span>
                     <Image
                       src={images.colleteral}
-                      className="ml-2"
+                      className="ml-2 w-[10px] xl:w-[12px]"
                       alt="sort-icon"
                       width={12}
                     />
@@ -84,13 +84,13 @@ const Table = () => {
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-5  text-left text-[10px]/[15px] md:text-[10px]/[15px] lg:text-[14px]/[18px] xl:text-[16px]/[20px] font-sora text-white text-opacity-60 font-semibold"
+                  className="px-6 py-5  text-left text-[10px]/[15px] md:text-[10px]/[15px] lg:text-[12px]/[18px] xl:text-[16px]/[20px] font-sora text-white text-opacity-60 font-semibold"
                 >
                   <div className="flex items-center">
                     <span>Borrow APY, Variable</span>
                     <Image
                       src={images.colleteral}
-                      className="ml-2"
+                      className="ml-2 w-[10px] xl:w-[12px]"
                       alt="sort-icon"
                       width={12}
                     />
@@ -106,34 +106,34 @@ const Table = () => {
                     <td className="px-2 py-7 whitespace-nowrap">
                       <div className="ml-4 flex items-center">
                         <Image src={data.icon} alt="coin-icon" />
-                        <div className=" text-[12px]/[15px] lg:text-[18px]/[21px] ml-3 font-sora text-white">
+                        <div className=" text-[12px]/[15px] lg:text-[14px]/[21px] xl:text-[18px]/[21px] ml-3 font-sora text-white">
                           {data.name}
                         </div>
                       </div>
                     </td>
                     <td className="px-10 py-7 whitespace-nowrap">
-                      <div className="text-[12px]/[15px] font-normal  lg:text-[18px]/[21px] font-sora text-white ">
+                      <div className="text-[12px]/[15px] font-normal  lg:text-[14px]/[21px] xl:text-[18px]/[21px] font-sora text-white ">
                         {data.collateral}
                       </div>
                     </td>
                     <td className="px-10 py-7 whitespace-nowrap">
-                      <div className="text-[12px]/[15px] font-normal  lg:text-[18px]/[21px] font-sora text-white ">
+                      <div className="text-[12px]/[15px] font-normal  lg:text-[14px]/[21px] xl:text-[18px]/[21px] font-sora text-white ">
                         {data.tvl}
                       </div>
                     </td>
                     <td className="px-10 py-7 whitespace-nowrap">
-                      <div className="text-[12px]/[15px] font-normal ml-3 lg:text-[18px]/[21px] font-sora text-white ">
+                      <div className="text-[12px]/[15px] font-normal ml-3 lg:text-[14px]/[21px] xl:text-[18px]/[21px] font-sora text-white ">
                         {data.mcr}
                       </div>
                     </td>
                     <td className="px-10 py-7 whitespace-nowrap">
-                      <div className="text-[12px]/[15px] font-normal ml-6  lg:text-[18px]/[21px] font-sora text-white ">
+                      <div className="text-[12px]/[15px] font-normal ml-6  lg:text-[14px]/[21px] xl:text-[18px]/[21px] font-sora text-white ">
                         {data.apr}
                       </div>
                     </td>
-                    <td className="text-[12px]/[15px] font-normal text-center lg:text-[18px]/[21px] px-8 py-7 ">
+                    <td className="text-[12px]/[15px] font-normal text-center lg:text-[14px]/[21px] xl:text-[18px]/[21px] px-8 py-7 ">
                       {" "}
-                      <button className="bg-[#FFFFFF1A]  w-[99px] bg-opacity-10 border border-white border-opacity-10 h-[41px]  font-sora  text-white text-opacity-60  py-1 rounded-[5px]">
+                      <button className="bg-[#FFFFFF1A] lg:w-[94px] xl:w-[99px] bg-opacity-10 border border-white border-opacity-10 lg:h-[35px] h-[41px]  font-sora  text-white text-opacity-60  py-1 rounded-[5px]">
                         {data.details}
                       </button>
                     </td>
@@ -144,11 +144,11 @@ const Table = () => {
             </tbody>
           </table>
           <div className="flex items-center  min-w-full border border-t-[#FFFFFF1A] py-8 border-b-[#FFFFFF1A] border-l-[#FFFFFF1A] border-r-[#FFFFFF1A] border-opacity-10">
-            <h3 className="text-white text-opacity-70  text-[14px] md:text-[22px] xl:text-[26px]/[32px] font-sora font-normal px-6">
+            <h3 className="text-white text-opacity-70  text-[14px] md:text-[18px]  xl:text-[26px]/[32px] font-sora font-normal px-6">
               Show Frozen or Paused Assets
             </h3>
-            <div className="w-[27px] h-[24px] bg-white rounded-[5px]"></div>
-            <div className="w-[27px] h-[24px] bg-[#01291D] rounded-r-[5px]"></div>
+            <div className="lg:w-[24px] xl:w-[27px] lg:h-[20px] xl:h-[24px] bg-white rounded-[5px]"></div>
+            <div className="lg:w-[24px] xl:w-[27px] lg:h-[20px] xl:h-[24px] bg-[#01291D] rounded-r-[5px]"></div>
           </div>
         </div>
         <div className="">
@@ -174,7 +174,7 @@ const Table = () => {
                         </div>
                       </div>
                       <div className="flex-col ">
-                        <div className="flex items-center justify-between mt-2">
+                        <div className="flex items-center justify-between mt-3">
                           <h3 className=" py-2 text-left text-[14px]/[15px] md:text-[18px]/[15px]  font-sora text-white text-opacity-60 font-normal">
                             Total Supplied
                           </h3>
@@ -182,7 +182,7 @@ const Table = () => {
                             {data.collateral}
                           </div>
                         </div>
-                        <div className="flex items-center justify-between ">
+                        <div className="flex items-center justify-between mt-2">
                           <h3 className=" py-2 text-left text-[14px]/[15px] md:text-[18px]/[15px]  font-sora text-white text-opacity-60 font-normal">
                             Supply APY
                           </h3>
@@ -190,7 +190,7 @@ const Table = () => {
                             {data.tvl}
                           </div>
                         </div>
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center justify-between mt-2">
                           <h3 className=" py-2 text-left text-[14px]/[15px] md:text-[18px]/[15px]  font-sora text-white text-opacity-60 font-normal">
                             Total Borrowed
                           </h3>
@@ -198,7 +198,7 @@ const Table = () => {
                             {data.mcr}
                           </div>
                         </div>
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center justify-between mt-2">
                           <h3 className=" py-2 text-left text-[14px]/[15px] md:text-[18px]/[15px]  font-sora text-white text-opacity-60 font-normal">
                             Borrow APY, Variable
                           </h3>
@@ -206,7 +206,7 @@ const Table = () => {
                             {data.apr}
                           </div>
                         </div>
-                        <button className="bg-[#082a20] text-gray-400 border mt-3 border-white border-opacity-10  w-full  py-1 rounded-[5px]">
+                        <button className="bg-[#FFFFFF0D] text-white text-opacity-60 border mt-4 border-white border-opacity-20  w-full  h-[39px] rounded-[5px]">
                           {data.details}
                         </button>
                       </div>
