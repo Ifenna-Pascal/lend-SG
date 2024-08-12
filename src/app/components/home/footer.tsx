@@ -56,13 +56,13 @@ const Footer = () => {
               About
             </a>
             <a
-              href="#Market"
+              href="/dashboard/market"
               className="text-white text-[10px] md:text-[14px] lg:text-[16px] mt-5 md:mt-0 "
             >
               Market
             </a>
             <a
-              href="#Dashboard"
+              href="/dashboard/maindashboard"
               className="text-white text-[10px] md:text-[14px] lg:text-[16px] mt-5 md:mt-0"
             >
               Dashboard

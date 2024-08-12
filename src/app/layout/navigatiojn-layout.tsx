@@ -91,15 +91,17 @@ const NavigationLayout = () => {
               Connect Wallet
             </Button>
           </div>
-          <div className="md:hidden">
+          <div className="md:hidden ">
             <button
               onClick={toggleMenu}
               className="text-white focus:outline-none focus:text-white"
             >
               {isXIcon ? (
-                <div className="2xl">x</div>
+                <div className=" bg-[#FFFFFF0D] h-[24px] w-[27px] items-center justify-center text-white text-opacity-70 flex my-auto border  border-[#FFFFFF] border-opacity-10 ">
+                  x
+                </div>
               ) : (
-                <div className=" bg-[#030D0A] h-[24px] w-[27px] items-center justify-center flex my-auto border-[#FFFFFF] border-opacity-10 ">
+                <div className=" bg-[#FFFFFF0D] h-[24px] w-[27px] items-center justify-center text-white text-opacity-70 flex my-auto border  border-[#FFFFFF] border-opacity-10 ">
                   <RxHamburgerMenu className="w-[16px] h-[10px] " />
                 </div>
               )}
@@ -108,20 +110,27 @@ const NavigationLayout = () => {
         </div>
 
         {showMenu && (
-          <div className="lg:hidden fixed flex flex-col inset-y-0  right-0 z-50 bg-[#060A14] mt-[4rem] shadow-lg w-full h-screen p-4 transform transition-transform duration-2000 ease-in-out">
-            {dashbaordLinks.map((link, index) => {
-              const active = router.pathname.includes(link.href);
-              return (
-                <Link to={link.href} key={index}>
-                  <span
-                    className={`${active && "text-[#01F8AF]"} pb-3 font-montserrat text-white font-semibold text-[10px]/[12px] lg:text-[16px]/[20px]`}
-                    onClick={closeMenu}
-                  >
-                    {link.title}
-                  </span>
-                </Link>
-              );
-            })}
+          <div className="lg:hidden fixed flex flex-col inset-y-0  right-0 z-50 bg-gradient-to-b from-[#02120D] to-[#000000]  mt-[3rem]  shadow-lg w-full h-screen  transform transition-transform duration-2000 ease-in-out">
+            <div className="border-y flex flex-col bg-[#01F8AF] bg-opacity-10 px-6  border-white border-opacity-50 mt-32 ">
+              <p className="text-[8px]/[12px] text-white text-opacity-70 mb-4 font-sora font-medium mt-2 ">
+                Menu
+              </p>
+              {dashbaordLinks.map((link, index) => {
+                const active = router.pathname.includes(link.href);
+                return (
+                  <>
+                    <Link to={link.href} key={index}>
+                      <p
+                        className={`${active && "text-[#01F8AF] "} mb-3 font-montserrat hover:text-[#01F8AF] text-white text-opacity-60 font-meduim text-[16px]/[24px]`}
+                        onClick={closeMenu}
+                      >
+                        {link.title}
+                      </p>
+                    </Link>
+                  </>
+                );
+              })}
+            </div>
           </div>
         )}
       </div>

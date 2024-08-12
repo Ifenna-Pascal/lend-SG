@@ -6,7 +6,7 @@ import Button from "@/app/components/ui/button";
 const Supplytable = () => {
   return (
     <div className=" py-6 lg:overflow-x-auto ">
-      <div className="w-[359px] md:w-[680px] lg:w-[450px] flex flex-col px-4 justify-center mb-16 mt-3 gap-1 xl:w-[629px] border-none bg-[#030D0A] text-white border border-white border-opacity-15  rounded-[6px] lg:rounded-[11px] text-opacity-50 h-[102px]  md:h-[133px] lg:h-[150px] xl:h-[183px] text-[6px] md:text-[10px] lg:text-[16px]">
+      <div className="w-full md:w-[680px] lg:w-[450px] flex flex-col px-4 justify-center mb-16 mt-3 gap-1 xl:w-[629px] 2xl:w-[800px] border-none bg-[#030D0A] text-white border border-white border-opacity-15  rounded-[6px] lg:rounded-[11px] text-opacity-50 h-[102px]  md:h-[133px] lg:h-[150px] xl:h-[183px] text-[6px] md:text-[10px] lg:text-[16px]">
         <div className="flex items-center gap-1">
           <Image src={images.plus} alt="plus" />
           <h3 className="font-sora text-white text-opacity-90 font-medium text-[14px]/[21px] md:text-[18px]/[30px] lg:text-[20px]/[35px] xl:text-[26px]/[39px]">

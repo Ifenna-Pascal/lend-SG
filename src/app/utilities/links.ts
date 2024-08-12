@@ -1,11 +1,11 @@
 export const dashbaordLinks = [
   {
-    title: "Markets",
-    href: "/dashboard/market",
+    title: "Dashboard",
+    href: "/dashboard/maindashboard",
   },
   {
-    title: "Dashboard",
-    href: "/dashboard/dapp",
+    title: "Markets",
+    href: "/dashboard/market",
   },
   {
     title: "More",

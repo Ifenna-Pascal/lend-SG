@@ -7,6 +7,7 @@ import Borrowtable from "./components/borrow";
 import Supplytable from "./components/supply-table";
 import Button from "../../components/ui/button";
 import { useState } from "react";
+import logo from "../../assets/images/homapage/singlelogo.svg";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("supply");
@@ -15,8 +16,8 @@ const Dashboard = () => {
     setActiveTab(tab);
   };
   return (
-    <div className="">
-      <div className="max-w-[2000px]  px-4 md:px-10   bg-[#02120D] font-sora h-[169px] md:h-[230px] lg:h-[290px] xl:h-[307px]  mx-auto   py-[1rem] md:py-[0.5rem]   ">
+    <div className="max-w-[2000px] mx-auto bg-gradient-to-b from-[black] to-[#02120D] h-screen ">
+      <div className=" px-4 md:px-10   bg-[#02120D] font-sora h-[169px] md:h-[230px] lg:h-[290px] xl:h-[307px]   py-[1rem] md:py-[0.5rem]   ">
         <div className="  flex flex-col  my-auto  ">
           <div className="py-4 md:py-6 xl:py-8 ">
             <h1 className="block lg:hidden text-bold text-[14px]/[20px] md:text-[28px]/[40px] lg:text-[34px]/[20px] text-white font-sora font-regular">
@@ -90,16 +91,16 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className="lg:hidden flex flex-col bg-[#01291D]  pt-5 px-4 md:px-10  ">
-        <div className="flex justify-between bg-[#012016] w-[379px] md:w-[680px] h-[39px] mx-auto shadow-lg ">
+      {/* <div className="lg:hidden flex flex-col bg-[#01291D]  pt-5 px-4 md:px-10  ">
+        <div className="flex justify-between bg-[#012016] w-full md:w-[680px] h-[39px] mx-auto shadow-lg ">
           <Button
-            className={`${activeTab === "supply" ? "bg-[#01F8AF] text-[#012016] w-[190px] md:w-[341px]" : "bg-[#012016] w-[189px] md:w-[339px] text-[#01F8AF]"} rounded-[3px] `}
+            className={`${activeTab === "supply" ? "bg-[#01F8AF] text-[#012016] w-full md:w-[341px]" : "bg-[#012016] w-full md:w-[339px] text-[#01F8AF]"} rounded-[3px] `}
             onClick={() => handleTabChange("supply")}
           >
             Supply
           </Button>
           <Button
-            className={`${activeTab === "borrow" ? "bg-[#01F8AF] text-[#012016] w-[190px] md:w-[341px]" : "bg-[#012016] w-[189px] md:w-[339px] text-[#01F8AF]"}  px-4 py-2 rounded-[3px]`}
+            className={`${activeTab === "borrow" ? "bg-[#01F8AF] text-[#012016] w-full md:w-[341px]" : "bg-[#012016] w-full md:w-[339px] text-[#01F8AF]"} rounded-[3px]`}
             onClick={() => handleTabChange("borrow")}
           >
             Borrow
@@ -113,6 +114,29 @@ const Dashboard = () => {
       <div className=" hidden lg:flex justify-between gap-2 lg:gap-7 xl:gap-14 bg-[#01291D]  px-4 md:px-10 mx-auto ">
         <Supplytable />
         <Borrowtable />
+      </div> */}
+
+      <div className=" flex flex-col bg-[#01291D]  p-6 m-10    rounded-[10px]  md:p-10 justify-center items-center ">
+        <Image
+          src={logo}
+          width={14}
+          height={14}
+          alt="search-icon"
+          className="w-[48px] md:w-[75px] lg:w-[120px] xl:w-[136px]"
+        />
+        <p className="text-[8px]/[12px] md:text-[18px] lg:text-[24px]/[34px] mt-2  text-white font-sora font-medium xl:text-[28px]/[42px]">
+          Please, connect your wallet
+        </p>
+        <p className="w-[80%] md:w-full text-[8px]/[12px] md:text-[18px]/[20px] text-center lg:text-[20px]/[38px] mt-2 md:mt-4 lg:mt-0 text-white text-opacity-70 font-medium font-sora mb-6 xl:text-[28px]/[42px]">
+          Please connect your wallet to see your supplies, borrowings, and open
+          positions.
+        </p>
+        <Button
+          variant={"primary"}
+          className="w-[65px] md:w-[130px] lg:w-[200px] xl:w-[238px]  bg-[#033426]  h-[18px]  md:h-[50px] lg:h-[60px] xl:h-[70px]  rounded-[5px] lg:rounded-[9px] xl:rounded-[10px] text-white text-opacity-70 border-none   text-[6px] md:text-[14px] lg:text-[18px] xl:text-[24px]"
+        >
+          Connect Wallet
+        </Button>
       </div>
     </div>
   );

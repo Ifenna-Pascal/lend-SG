@@ -6,8 +6,8 @@ import Button from "@/app/components/ui/button";
 
 const MarketDashboard = () => {
   return (
-    <div className="">
-      <div className="max-w-[2000px]  px-4 md:px-10   bg-[#030D0A] font-sora h-[185px] md:h-[307px]  mx-auto   py-[1rem] md:py-[0.5rem]   ">
+    <div className="max-w-[2000px] mx-auto">
+      <div className="  px-4 md:px-10   bg-[#030D0A] font-sora h-[185px] md:h-[307px]    py-[1rem] md:py-[0.5rem]   ">
         <div className="  flex flex-col  my-auto  ">
           <div className="py-0 md:py-8 ">
             <h1 className="block lg:hidden text-bold text-[14px]/[20px] md:text-[28px]/[40px] lg:text-[34px]/[20px] text-white font-sora font-regular">

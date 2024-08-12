@@ -7,8 +7,8 @@ import SingleTable from "./singletable";
 
 const Marketsingle = () => {
   return (
-    <div className="px-4 md:px-10  bg-gradient-to-t from-[#013B2A] to-[#030D0A] ">
-      <div className="max-w-[2000px]   mx-auto   py-[5rem] md:py-[0.5rem]  ">
+    <div className="px-4 md:px-10  bg-gradient-to-t from-[#013B2A] to-[#030D0A] max-w-[2000px]   mx-auto ">
+      <div className="   py-[5rem] md:py-[0.5rem]  ">
         <div className="  flex flex-col  my-auto  ">
           <div className=" flex items-center gap-2 py-0 md:py-10 mb-6">
             <Button
