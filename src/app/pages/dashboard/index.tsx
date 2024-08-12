@@ -8,12 +8,22 @@ import Supplytable from "./components/supply-table";
 import Button from "../../components/ui/button";
 import { useState } from "react";
 import logo from "../../assets/images/homapage/singlelogo.svg";
+import ModalContainer from "@/app/components/modal";
+import WalletConnectModal from "@/app/components/modal/connect-modal";
 
 const Dashboard = () => {
+  const [open, setOpen] = useState(false);
+  const close = () => setOpen(false);
   const [activeTab, setActiveTab] = useState("supply");
-
+  const [walletConnected, setWalletConnected] = useState(false);
   const handleTabChange = (tab: "supply" | "borrow") => {
     setActiveTab(tab);
+  };
+
+  const handleWalletConnect = () => {
+    // Implement logic to connect wallet here
+    // Once successful, set walletConnected to true
+    setWalletConnected(true);
   };
   return (
     <div className="max-w-[2000px] mx-auto bg-gradient-to-b from-[black] to-[#02120D] h-screen ">
@@ -134,10 +144,15 @@ const Dashboard = () => {
         <Button
           variant={"primary"}
           className="w-[65px] md:w-[130px] lg:w-[200px] xl:w-[238px]  bg-[#033426]  h-[18px]  md:h-[50px] lg:h-[60px] xl:h-[70px]  rounded-[5px] lg:rounded-[9px] xl:rounded-[10px] text-white text-opacity-70 border-none   text-[6px] md:text-[14px] lg:text-[18px] xl:text-[24px]"
+          onClick={() => setOpen(true)}
         >
           Connect Wallet
         </Button>
       </div>
+
+      <ModalContainer open={open} close={close}>
+        <WalletConnectModal close={close} />
+      </ModalContainer>
     </div>
   );
 };
