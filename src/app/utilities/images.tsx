@@ -35,6 +35,7 @@ import wallet from "../assets/images/dashboard/wallet.svg";
 import caution from "../assets/images/dashboard/caution.svg";
 import colleteral from "../assets/images/dashboard/colleteral.svg";
 import hide from "../assets/images/dashboard/hide.svg";
+import blacklogo from "../assets/images/dashboard/blacklogo.svg";
 
 export const images = {
   cancel,
@@ -74,4 +75,5 @@ export const images = {
   caution,
   colleteral,
   hide,
+  blacklogo,
 };

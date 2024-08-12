@@ -40,7 +40,7 @@ const NavBar = () => {
                 FAQ
               </a>
             </div>
-            <Link to={"/dashboard/market"}>
+            <Link to={"/dashboard/maindashboard"}>
               <div className="mr-[-8rem] md:mr-0">
                 <button className="bg-transparent border-2  font-sora text-[8px] md:text-[14px]  border-[#01F8AF] hover:bg-[#01F8AF] text-[#01F8AF] hover:text-black px-[10px] py-[4px] md:px-6 md:py-[7px] rounded-full text-md flex flex-row items-center gap-1">
                   Launch App
