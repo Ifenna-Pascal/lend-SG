@@ -4,8 +4,7 @@ import React, { useState } from "react";
 import logo from "./../../assets/images/homapage/grouped-logo.svg";
 import Image from "next/image";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { GiCancel } from "react-icons/gi";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -29,6 +28,8 @@ const NavBar = () => {
             <Image
               src={logo}
               alt="logo"
+              width={100}
+              height={100}
               className="w-[60px] md:w-[80px] lg:w-[100px] xl:w-[125px] "
             />
           </div>
@@ -53,7 +54,7 @@ const NavBar = () => {
                 FAQ
               </a>
             </div>
-            <Link to={"/dashboard/maindashboard"}>
+            <Link href={"/dashboard"}>
               <div className="mr-[-8rem] md:mr-0">
                 <button className=" border bg-[#FFFFFF0D]  justify-center  font-sora text-center text-[8px]/[12px] md:text-[10px]/[16px] lg:-text-[12px]/[18px]  xl:text-[14px]/[21px]  border-[#01F8AF] hover:bg-[#01F8AF] text-[#01F8AF] hover:text-white rounded-full text-md flex flex-row items-center gap-1 w-[77px] md:w-[97px] lg:w-[110px]  xl:w-[135px] h-[24px] md:h-[30px] lg:h-[33px] xl:h-[42px] ">
                   Launch App

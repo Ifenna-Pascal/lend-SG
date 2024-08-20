@@ -1,29 +1,18 @@
 "use client";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import {
-  HomePage,
-  MarketDashboard,
-  Dashboard,
-  Staking,
-  Marketsingle,
-} from "./pages";
-import DashboardLayout from "./layout/dashboard-layout";
+import Docs from "@/app/components/home/doc";
+import Faq from "@/app/components/home/faq";
+import Footer from "@/app/components/home/footer";
+import HeroSection from "@/app/components/home/herosection";
+import NavBar from "@/app/components/home/navbar";
 
-function Page() {
+export default function Home() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/dashboard" element={<DashboardLayout />}>
-          <Route path="market" element={<MarketDashboard />} />
-          <Route path="maindashboard" element={<Dashboard />} />
-          <Route path="staking" element={<Staking />} />
-          {/* <Route path="market/:id" element={<Marketsingle />} /> */}
-          <Route path="marketsingle" element={<Marketsingle />} />
-        </Route>
-      </Routes>
-    </Router>
+    <div>
+      <NavBar />
+      <HeroSection />
+      <Docs />
+      <Faq />
+      <Footer />
+    </div>
   );
 }
-
-export default Page;

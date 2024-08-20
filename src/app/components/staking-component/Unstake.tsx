@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { images } from "../../utilities/images";
 import logo from "../../assets/images/homapage/singlelogo.svg";
-import { useState } from "react";
-import Button from "../../components/ui/button";
+import Button from "../ui/button";
 import ProgressBar from "@/app/components/progressbar";
 
 export default function Unstake() {
@@ -14,7 +13,13 @@ export default function Unstake() {
             Token Balance
           </h1>
           <div className="flex items-center gap-2 mt-2 md:mt-3 lg:mt-5">
-            <Image src={logo} alt="logo" className="w-4 md:w-6" />
+            <Image
+              src={logo}
+              alt="logo"
+              className="w-4 md:w-6"
+              width={100}
+              height={100}
+            />
             <p className="text-gray-400 font-sora font-semibold text-[12px]/[15px] md:text-[14px]/[18px] lg:text-[18px]/[22px] xl:text-[30px]/[37px] ">
               212.00
             </p>
@@ -62,7 +67,13 @@ export default function Unstake() {
             </div>
             <div className="text-white  flex-col px-3 md:px-6 cursor-pointer  ">
               <div className="flex gap-3 mt-5 items-center">
-                <Image src={logo} alt="logo" className="w-5 md:w-10 " />
+                <Image
+                  src={logo}
+                  alt="logo"
+                  className="w-5 md:w-10 "
+                  width={100}
+                  height={100}
+                />
                 <h6 className="font-sora font-bold text-white text-opacity-80  text-[14px]/[15px] md:text-[18px]/[18px] lg:text-[22px]/[18px] xl:text-[40px]/[32px]">
                   TP
                 </h6>

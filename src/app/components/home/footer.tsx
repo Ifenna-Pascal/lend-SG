@@ -25,6 +25,8 @@ const Footer = () => {
               <Image
                 src={logo}
                 alt="logo"
+                width={100}
+                height={100}
                 className="w-20 md:w-30 lg:w-32 xl:w-40 mb-4"
               />
             </div>
@@ -70,17 +72,41 @@ const Footer = () => {
               Market
             </a>
             <a
-              href="/dashboard/maindashboard"
+              href="/dashboard"
               className="text-white text-[10px] md:text-[12px] lg:text-[14px] xl:text-[20px] font-sora font-medium  mt-5 md:mt-0"
             >
               Dashboard
             </a>
           </div>
           <div className="flex flex-row font-sora font-bold space-x-2  mt-7 px-1 md:px-1 ">
-            <Image src={whatsapp} alt="logo" className="" />
-            <Image src={facebook} alt="logo" className="" />
-            <Image src={twitter} alt="logo" className="" />
-            <Image src={instagram} alt="logo" className="" />
+            <Image
+              src={whatsapp}
+              alt="logo"
+              className=""
+              width={40}
+              height={40}
+            />
+            <Image
+              src={facebook}
+              alt="logo"
+              className=""
+              width={40}
+              height={40}
+            />
+            <Image
+              src={twitter}
+              alt="logo"
+              className=""
+              width={40}
+              height={40}
+            />
+            <Image
+              src={instagram}
+              alt="logo"
+              className=""
+              width={40}
+              height={40}
+            />
           </div>
         </div>
         <div className=" mt-3 px-2 md:px-3">

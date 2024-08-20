@@ -2,10 +2,10 @@ import Image from "next/image";
 import { images } from "../../utilities/images";
 import logo from "../../assets/images/homapage/singlelogo.svg";
 import { useState } from "react";
-import Button from "../../components/ui/button";
+import Button from "../ui/button";
 import ProgressBar from "@/app/components/progressbar";
 
-export default function Stake() {
+export default function Unstake() {
   return (
     <div>
       <div className="mx-auto flex items-center gap-5 shadow-lg rounded-[15px]  justify-around px-2 md:px-9 lg:px-0 xl:px-9  mt-9">
@@ -14,7 +14,13 @@ export default function Stake() {
             Token Balance
           </h1>
           <div className="flex items-center gap-2 mt-2 md:mt-3 lg:mt-5">
-            <Image src={logo} alt="logo" className="w-4 md:w-6" />
+            <Image
+              src={logo}
+              alt="logo"
+              width={100}
+              height={100}
+              className="w-4 md:w-6"
+            />
             <p className="text-gray-400 font-sora font-semibold text-[12px]/[15px] md:text-[14px]/[18px] lg:text-[18px]/[22px] xl:text-[30px]/[37px] ">
               212.00
             </p>
@@ -62,7 +68,13 @@ export default function Stake() {
             </div>
             <div className="text-white  flex-col px-3 md:px-6 cursor-pointer  ">
               <div className="flex gap-3 mt-5 items-center">
-                <Image src={logo} alt="logo" className="w-5 md:w-10 " />
+                <Image
+                  src={logo}
+                  alt="logo"
+                  width={100}
+                  height={100}
+                  className="w-5 md:w-10 "
+                />
                 <h6 className="font-sora font-bold text-white text-opacity-80  text-[14px]/[15px] md:text-[18px]/[18px] lg:text-[22px]/[18px] xl:text-[40px]/[32px]">
                   TP
                 </h6>
@@ -73,18 +85,12 @@ export default function Stake() {
             <ProgressBar progress={40} />
           </div>
         </div>
-        <div className=" flex  justify-between gap-3 md:gap-0 mt-12  mb-9">
+        <div className=" w-full  mt-12  mb-9">
           <Button
             variant={"primary"}
-            className="lg:w-[320px] xl:w-[405px] lg:h-[80px] h-[50px] xl:h-[97px] text-[14px]/[15px] text-white text-opacity-30 hover:text-white md:text-[18px]/[18px] lg:text-[22px]/[18px] xl:text-[36px]/[37px] border border-[#00A675] hover:border hover:border-[#019267] bg-[#072018] bg-opacity-[49%] hover:bg-gradient-to-r from-[#019267] to-[#01F8AF] font-sora font-semibold"
+            className=" lg:h-[80px] w-full h-[60px] xl:h-[97px] text-[14px]/[15px] text-white text-opacity-30 hover:text-white md:text-[18px]/[18px] lg:text-[22px]/[18px] xl:text-[36px]/[37px] border border-[#00A675] hover:border hover:border-[#019267] bg-[#072018] bg-opacity-[49%] hover:bg-gradient-to-r from-[#019267] to-[#01F8AF] font-sora font-semibold"
           >
-            Stake
-          </Button>
-          <Button
-            variant={"primary"}
-            className="lg:w-[320px] xl:w-[405px] lg:h-[80px] h-[50px] xl:h-[97px] text-[12px]/[15px] text-white text-opacity-30 hover:text-white md:text-[18px]/[18px] lg:text-[22px]/[18px] xl:text-[36px]/[37px] border border-[#00A675] hover:border hover:border-[#019267] bg-[#072018] bg-opacity-[49%] hover:bg-gradient-to-r from-[#019267] to-[#01F8AF] font-sora font-semibold"
-          >
-            Claim Rewards
+            Unstake
           </Button>
         </div>
       </div>

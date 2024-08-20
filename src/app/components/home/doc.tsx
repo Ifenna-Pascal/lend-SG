@@ -54,6 +54,8 @@ const Docs = () => {
                   <Image
                     src={item.img}
                     alt="icons"
+                    width={100}
+                    height={100}
                     className="w-[226px] md:w-[180px] lg:w-[190px] xl:w-[241px] h-[200px] font-sora  lg:h-[200px] xl:h-[241px] mt-5"
                   />
                   <h2 className="text-[26px] md:text-[18px] lg:text-[20px] xl:text-[24px] font-bold font-sora mt-5">
@@ -69,7 +71,13 @@ const Docs = () => {
 
           <div className="flex flex-col-reverse md:flex-row  md:items-center   space-x-0 md:space-x-4 lg:flex-row mt-[3rem]  ">
             <div className="w-full md:w-lg lg:w-3/4 xl:w-3/5  flex flex-col space-y-4 md:space-y-0 px-0  md:px-0">
-              <Image src={docimage} alt="contact" className="w-3/4 md:w-3/4 " />
+              <Image
+                src={docimage}
+                alt="contact"
+                className="w-3/4 md:w-3/4 "
+                width={100}
+                height={100}
+              />
             </div>
             <div className="w-full md:w-lg lg:w-[590px] mt-0 md:mt-6 lg:mt-0 px-0 lg:px-4 ">
               <h4 className="font-orbitron text-center md:text-left   text-[12px]/[15px] font-sora font-bold mt-6 md:text-[14px]/[18px] text-[#01F9AF] lg:text-[14px]/[20px] xl:text-[18px]/[22px]  md:mt-0  ">

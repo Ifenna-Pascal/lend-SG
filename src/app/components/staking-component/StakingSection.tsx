@@ -1,10 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import { images } from "../../utilities/images";
 import logo from "../../assets/images/homapage/singlelogo.svg";
 import { useState } from "react";
-import Button from "../../components/ui/button";
-import Stake from "./stake";
-import Unstake from "./unstake";
+import Button from "../ui/button";
+import Stake from "./Stake";
+import Unstake from "./Unstake";
 
 function Stakingsection() {
   const [activeTab, setActiveTab] = useState("stake");

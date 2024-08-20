@@ -1,9 +1,6 @@
-import Image from "next/image";
-import { marketData } from "../../__mockdata__/market";
-import { images } from "../../utilities/images";
-import Stakingsection from "./staking-section";
+import Stakingsection from "@/app/components/staking-component/StakingSection";
 
-const Staking = () => {
+const StakingHome = () => {
   return (
     <div className=" ">
       <div className=" w-full  ">
@@ -40,4 +37,4 @@ const Staking = () => {
   );
 };
 
-export default Staking;
+export default StakingHome;
