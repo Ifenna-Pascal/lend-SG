@@ -153,10 +153,7 @@ const SupplyTable = () => {
           <div className="lg:hidden flex flex-col px-0 md:px-3  mb-9">
             {supplyTable.map((data, index) => {
               return (
-                <div
-                  key={index}
-                  className="hover:bg-[#FFFFFF0D]  cursor-pointer"
-                >
+                <div key={index} className="  cursor-pointer">
                   <div className="flex flex-col">
                     <div className=" flex-col items-center px-6">
                       <div className="w-full text-white text-opacity-50 mb-7  mt-5">
