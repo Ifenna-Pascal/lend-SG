@@ -142,7 +142,7 @@ const Table = () => {
                 {data.details}
               </button>
               <div className="mt-9">
-                <hr />
+                <hr className="" />
               </div>
             </div>
           ))}

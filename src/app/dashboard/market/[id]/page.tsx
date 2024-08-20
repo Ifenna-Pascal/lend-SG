@@ -22,14 +22,14 @@ const MarketDetailsPage = ({ params }: { params: any }) => {
             </Button>
             <div className="flex items-center gap-2 ml-0 md:ml-2 ">
               <Image
-                src={images?.usdt}
+                src={images?.eth}
                 width={14}
                 height={14}
                 alt="search-icon "
                 className="w-[24px] h-[24px] md:w-[40px] md:h-[40px] lg:w-[48px] lg:h-[48px] xl:w-[60px] xl:h-[60px] bg-none"
               />
-              <h1 className="text-bold text-[19px]/[24px] md:text-[24px]/[30px] lg:text-[36px]/[40px] xl:text-[48px]/[60px]  text-white font-sora font-medium">
-                USDT
+              <h1 className="text-bold text-[19px]/[24px] md:text-[24px]/[30px] lg:text-[34px]/[40px] xl:text-[48px]/[60px]  text-white font-sora font-medium">
+                Ethereum
               </h1>
 
               <Image

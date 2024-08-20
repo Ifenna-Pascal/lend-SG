@@ -328,20 +328,20 @@ const MarketDetailsTable = () => {
           </div>
         </div>
       </div>
-      <div className="border border-white border-opacity-10 bg-[#030D0A] shadow-md rounded-[10px] w-full lg:w-1/2 xl:w-1/2  px-3 md:px-6 lg:px-0 h-[40vh] ">
+      <div className="border border-white border-opacity-10 bg-[#030D0A] shadow-md rounded-[10px] w-full lg:w-1/2 xl:w-1/2  px-3 md:px-6 lg:px-0 h-[43vh] lg:h-[30vh] 2xl:h-[20vh] ">
         <h3 className="text-white mt-6 text-[16px] md:text-[18px] lg:text-[20px] xl:text-[26px] font-sora font-regular px-6">
           Your Info
         </h3>
-        <div className="flex justify-start w-full items-center h-[39px] md:h-[45px] mx-auto shadow-lg mt-5 md:mt-7 px-8  ">
+        <div className="flex justify-start w-full items-center h-[39px] md:h-[45px] mx-auto shadow-lg mt-5 md:mt-5 px-8  ">
           <Button
-            className={`${activeTab === "matic" ? "bg-gradient-to-r from-[#019267] to-[#01F8AF] w-1/2   h-[35px] md:h-[50px] lg:h-[50px] xl:h-[80px] text-[14px]/[15px] md:[15px]/[18px] lg:-text-[20px]/[28px] xl:text-[20px]/[37px]  text-[#012016] " : "bg-[#012016] text-[#01F8AF] text-[14px]/[15px] md:[15px]/[18px] lg:-text-[20px]/[28px] w-1/2 xl:text-[20px]/[37px]   h-[35px] md:h-[50px] lg:h-[50px] xl:h-[80px]"} font-sora 
+            className={`${activeTab === "matic" ? "bg-gradient-to-r from-[#019267] to-[#01F8AF] w-1/2   h-[35px] md:h-[40px] lg:h-[45px] xl:h-[60px] text-[14px]/[15px] md:[15px]/[18px] lg:-text-[20px]/[28px] xl:text-[20px]/[37px]  text-[#012016] " : "bg-[#012016] text-[#01F8AF] text-[14px]/[15px] md:[15px]/[18px] lg:-text-[20px]/[28px] w-1/2 xl:text-[20px]/[37px]   h-[35px] md:h-[40px] lg:h-[45px] xl:h-[60px]"} font-sora 
                font-regular `}
             onClick={() => handleTabChange("matic")}
           >
             Matic
           </Button>
           <Button
-            className={`${activeTab === "maticEth" ? "bg-gradient-to-r from-[#019267] to-[#01F8AF] w-1/2  h-[35px] md:h-[50px] lg:h-[50px] xl:h-[80px] text-[#012016] text-[14px]/[15px] md:[15px]/[18px] lg:-text-[20px]/[28px] xl:text-[20px]/[37px] " : "bg-[#012016] text-[#01F8AF] text-[14px]/[15px] md:[15px]/[18px] lg:-text-[20px]/[28px] xl:text-[20px]/[37px]  w-1/2 h-[35px] md:h-[50px] lg:h-[50px] xl:h-[80px]"} font-sora 
+            className={`${activeTab === "maticEth" ? "bg-gradient-to-r from-[#019267] to-[#01F8AF] w-1/2   h-[35px] md:h-[40px] lg:h-[45px] xl:h-[60px] text-[14px]/[15px] md:[15px]/[18px] lg:-text-[20px]/[28px] xl:text-[20px]/[37px]  text-[#012016] " : "bg-[#012016] text-[#01F8AF] text-[14px]/[15px] md:[15px]/[18px] lg:-text-[20px]/[28px] w-1/2 xl:text-[20px]/[37px]   h-[35px] md:h-[40px] lg:h-[45px] xl:h-[60px]"} font-sora 
                font-regular `}
             onClick={() => handleTabChange("maticEth")}
           >
