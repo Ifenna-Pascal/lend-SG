@@ -1,6 +1,6 @@
 import { NextApiRequest } from "next";
 
-export async function GET(req: NextApiRequest) {
+export async function GET() {
   const response = await fetch(
     "http://3.80.55.144:21102/governance/biturbolend",
   );
