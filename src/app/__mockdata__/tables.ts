@@ -173,11 +173,6 @@ export const wallets = [
   },
 
   {
-    icon: images.phantom,
-    name: "Phantom Wallet",
-  },
-
-  {
     icon: images.walletConnect,
     name: "WalletConnect",
   },

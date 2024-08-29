@@ -70,6 +70,14 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .circle {
+    width: 200px;
+    height: 300px;
+    background-color: #01f8af;
+    /* border-radius: 50%; */
+    filter: blur(150px);
+  }
 }
 
 .progress-bar-container {

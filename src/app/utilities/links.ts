@@ -1,7 +1,7 @@
 export const dashbaordLinks = [
   {
     title: "Dashboard",
-    href: "/dashboard/maindashboard",
+    href: "/dashboard",
   },
   {
     title: "Markets",
@@ -9,7 +9,7 @@ export const dashbaordLinks = [
   },
   {
     title: "More",
-    href: "/dashboard/marketsingle",
+    href: "/dashboard/more",
   },
   {
     title: "Staking",
