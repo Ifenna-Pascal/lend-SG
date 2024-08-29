@@ -1,3 +1,4 @@
+"use client";
 import MarketHome from "./MarketHome";
 
 export default function MarketPage() {

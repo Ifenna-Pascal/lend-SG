@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-
+import { ToastContainer } from "react-toastify";
 import DashboardNavBar from "../components/navbar/DashboardNavBar";
-
+import WagmiWrapper from "../providers/wagmi/wagmi-providers";
+import "react-toastify/dist/ReactToastify.css";
+import ContextProvider from "../providers/context/context-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -18,11 +20,25 @@ export default function DashboardLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="bg-black pb-24 min-h-screen w-full">
-          <DashboardNavBar />
-          <br /> <br />
-          {children}
-        </div>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+        />
+        <WagmiWrapper>
+          <ContextProvider>
+            <DashboardNavBar />
+            <br /> <br />
+            {children}
+          </ContextProvider>
+        </WagmiWrapper>
       </body>
     </html>
   );

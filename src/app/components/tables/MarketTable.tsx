@@ -4,9 +4,13 @@ import Image from "next/image";
 import { marketTable } from "../../__mockdata__/tables";
 import { images } from "../../utilities/images";
 import { useRouter } from "next/navigation";
+import { useContext } from "react";
+import { getBigNumber } from "@/app/utilities/amount-fomatter";
+import { AppContext } from "@/app/providers/context/context-provider";
 
 const Table = () => {
   const router = useRouter();
+  const { marketData, loading } = useContext(AppContext);
 
   return (
     <div className="overflow-x-auto px-4 md:px-10 py-10 bg-[#01291D]">
@@ -58,42 +62,54 @@ const Table = () => {
               </tr>
             </thead>
             <tbody className="divide-y divide-[#FFFFFF1A]">
-              {marketTable.map((data, index) => (
-                <tr
-                  key={index}
-                  className="hover:bg-[#FFFFFF0D] cursor-pointer"
-                  onClick={() => router.push(`/dashboard/market/${index}`)}
-                >
-                  <td className="px-6 py-5 flex items-center">
-                    <Image
-                      src={data.icon}
-                      alt="coin-icon"
-                      width={24}
-                      height={24}
-                    />
-                    <span className="ml-3 text-[12px] md:text-[14px] xl:text-[18px] text-white">
-                      {data.name}
-                    </span>
-                  </td>
-                  <td className="px-6 py-5 text-[12px] md:text-[14px] xl:text-[18px] text-white">
-                    {data.collateral}
-                  </td>
-                  <td className="px-6 py-5 text-[12px] md:text-[14px] xl:text-[18px] text-white">
-                    {data.tvl}
-                  </td>
-                  <td className="px-6 py-5 text-[12px] md:text-[14px] xl:text-[18px] text-white">
-                    {data.mcr}
-                  </td>
-                  <td className="px-6 py-5 text-[12px] md:text-[14px] xl:text-[18px] text-white">
-                    {data.apr}
-                  </td>
-                  <td className="px-6 py-5 text-center">
-                    <button className="bg-[#FFFFFF1A] border border-white border-opacity-10 text-white text-opacity-60 px-4 py-2 rounded">
-                      {data.details}
-                    </button>
-                  </td>
-                </tr>
-              ))}
+              {marketData && marketData.length > 0 ? (
+                marketData.map((data, index) => (
+                  <tr
+                    key={index}
+                    className="hover:bg-[#FFFFFF0D] cursor-pointer"
+                    onClick={() => router.push(`/dashboard/market/${index}`)}
+                  >
+                    <td className="px-6 py-5 flex items-center">
+                      <Image
+                        src={data.img}
+                        alt="coin-icon"
+                        width={24}
+                        height={24}
+                      />
+                      <span className="ml-3 text-[12px] md:text-[14px] xl:text-[18px] text-white">
+                        {data.name}
+                      </span>
+                    </td>
+                    <td className="px-6 py-5 text-[12px] md:text-[14px] xl:text-[18px] text-white">
+                      {loading
+                        ? "..."
+                        : getBigNumber(data.supplyBalance)
+                            .dp(2, 1)
+                            .toString(10)}
+                    </td>
+                    <td className="px-6 py-5 text-[12px] md:text-[14px] xl:text-[18px] text-white">
+                      {getBigNumber(data.supplyApy).dp(3, 1).toString(10)}%
+                    </td>
+                    <td className="px-6 py-5 text-[12px] md:text-[14px] xl:text-[18px] text-white">
+                      {loading
+                        ? "..."
+                        : getBigNumber(data.borrowBalacne)
+                            .dp(2, 1)
+                            .toString(10)}
+                    </td>
+                    <td className="px-6 py-5 text-[12px] md:text-[14px] xl:text-[18px] text-white">
+                      {getBigNumber(data.borrowApy).dp(3, 1).toString(10)}%
+                    </td>
+                    <td className="px-6 py-5 text-center">
+                      <button className="bg-[#FFFFFF1A] border border-white border-opacity-10 text-white text-opacity-60 px-4 py-2 rounded">
+                        Details
+                      </button>
+                    </td>
+                  </tr>
+                ))
+              ) : (
+                <div className="w-8 h-8  border-2 ml-2 border-dashed rounded-full animate-spin border-white"></div>
+              )}
             </tbody>
           </table>
         </div>

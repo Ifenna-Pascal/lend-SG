@@ -3,8 +3,31 @@ import { marketData } from "../../__mockdata__/market";
 import { images } from "../../utilities/images";
 import Table from "../../components/tables/MarketTable";
 import Button from "@/app/components/ui/button";
+import { useContext, useMemo } from "react";
+import { AppContext } from "@/app/providers/context/context-provider";
+import { compactNumberFormat } from "@/app/utilities/amount-fomatter";
 
 const MarketHome = () => {
+  const { marketData: data } = useContext(AppContext);
+  const dataInfo = useMemo(() => {
+    if (data) {
+      return data.reduce(
+        (accmulator, token) => {
+          return {
+            totalBorrows:
+              accmulator.totalBorrows + Number(token.totalBorrowsUsd),
+            totalSupply: accmulator.totalSupply + Number(token.totalSupplyUsd),
+          };
+        },
+        {
+          totalBorrows: 0,
+          totalSupply: 0,
+        },
+      );
+    }
+  }, [data]);
+  console.log(dataInfo, "data-info");
+
   return (
     <div className="max-w-[2000px] mx-auto">
       <div className=" px-4 md:px-10   bg-[#02120D] font-sora h-[186px] md:h-[255px] lg:h-[255px] xl:h-[300px]   py-[1rem] md:py-[0.5rem]   ">
@@ -13,30 +36,53 @@ const MarketHome = () => {
             <h1 className="block lg:hidden text-bold text-[14px]/[20px] md:text-[28px]/[40px] lg:text-[34px]/[20px] text-white font-sora font-regular">
               Markets{" "}
             </h1>
-            <h1 className="text-bold text-[24px]/[30px] md:text-[34px]/[30px] mt-1 xl:mt-4 lg:text-[48px]/[80px] xl:text-[64px]/[80px] text-[#01F8AF] font-sora font-bold">
+            <h1 className="text-bold text-[24px]/[30px] md:text-[34px]/[30px] mt-1 xl:mt-4 lg:text-[48px]/[80px]  text-[#01F8AF] font-sora font-bold">
               Biturbo Market{" "}
             </h1>
           </div>
           <div className="hidden lg:flex justify-between  items-center">
             <div className="lg:w-3/5 xl:w-2/3 flex items-center lg:rounded-[7px] xl:rounded-[10px] bg-[#013B2A] justify-between lg:h-[85px]  xl:h-[115px]">
-              {marketData.map((data, index) => {
-                return (
-                  <div
-                    key={index}
-                    className=" text-white  flex-col px-2 lg:px-6 cursor-pointer"
-                  >
-                    <h3 className="font-sora text-[6px] md:text-[10px] lg:text-[12px] xl:text-[16px]">
-                      {data.title}
-                    </h3>
-                    <h6 className="font-helvatica text-[8px]  font-medium md:text-[10px] lg:text-[14px] xl:text-[24px]/[36px]">
-                      <span className="text-white text-opacity-70  font-semibold">
-                        {data.sign}
-                      </span>
-                      {data.amount}
-                    </h6>
-                  </div>
-                );
-              })}
+              <div className=" text-white  flex-col px-2 lg:px-6 cursor-pointer">
+                <h3 className="font-sora text-[6px] md:text-[10px] lg:text-[12px] xl:text-[16px]">
+                  Total Market Size
+                </h3>
+                <h6 className="font-helvatica text-[8px]  font-medium md:text-[10px] lg:text-[14px] xl:text-[24px]/[36px]">
+                  <span className="text-white text-opacity-70  font-semibold">
+                    $
+                  </span>
+                  10.54B
+                </h6>
+              </div>
+              <div className=" text-white  flex-col px-2 lg:px-6 cursor-pointer">
+                <h3 className="font-sora text-[6px] md:text-[10px] lg:text-[12px] xl:text-[16px]">
+                  Total Available
+                </h3>
+                <h6 className="font-helvatica text-[8px]  font-medium md:text-[10px] lg:text-[14px] xl:text-[24px]/[36px]">
+                  <span className="text-white text-opacity-70  font-semibold">
+                    $
+                  </span>
+                  {compactNumberFormat(dataInfo?.totalSupply, true) ?? 0}
+                </h6>
+              </div>
+              <div className=" text-white  flex-col px-2 lg:px-6 cursor-pointer">
+                <h3 className="font-sora text-[6px] md:text-[10px] lg:text-[12px] xl:text-[16px]">
+                  Total Borrows
+                </h3>
+                <h6 className="font-helvatica text-[8px]  font-medium md:text-[10px] lg:text-[14px] xl:text-[24px]/[36px]">
+                  <span className="text-white text-opacity-70  font-semibold">
+                    $
+                  </span>
+                  {compactNumberFormat(dataInfo?.totalBorrows, true) ?? 0}
+                </h6>
+              </div>
+              <div className=" text-white  flex-col px-2 lg:px-6 cursor-pointer">
+                <h3 className="font-sora text-[6px] md:text-[10px] lg:text-[12px] xl:text-[16px]">
+                  Collateralization
+                </h3>
+                <h6 className="font-helvatica text-[8px]  font-medium md:text-[10px] lg:text-[14px] xl:text-[24px]/[36px]">
+                  133.19%
+                </h6>
+              </div>
             </div>
 
             <div className="w-1/4 xl:h-[48px] relative bg-[#FFFFFF0D] flex items-center border border-white border-opacity-30 lg:h-[40px] gap-2  rounded-[5px]">

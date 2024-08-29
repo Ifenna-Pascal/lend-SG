@@ -1,6 +1,6 @@
 import StakingHome from "./StakingHome";
 
-export default function () {
+export default function StakingPage() {
   return (
     <div>
       <StakingHome />

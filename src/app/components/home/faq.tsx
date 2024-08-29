@@ -36,7 +36,7 @@ const Faq = () => {
 
   return (
     <div className="bg-[#000000] ">
-      <div className=" max-w-[2000px] mx-auto py-[1rem] md:py-[4px] xl:py-[4px]">
+      <div className="px-16 mx-auto py-[1rem] md:py-[4px] xl:py-[4px]">
         <h1 className="text-[#01F9AF] text-[16px] font-sora  text-center mt-[1rem] lg:mt-[5rem] 2xl:mt-[1rem] font-bold tracking-wide md:text-[20px] lg:text-[24px] xl:text-[32px]">
           FAQ{" "}
         </h1>
@@ -46,6 +46,8 @@ const Faq = () => {
         <div className="max-w-[2000px]mx-auto mt-4 mb-[3rem] md:mt-10 px-8 md:px-10">
           {faqData.map((faq, index) => (
             <div
+              data-aos-duration={`${1500 * index}`}
+              data-aos="fade-left"
               key={index}
               className="mb-6 border border-[#01F8AF] border-opacity-50 bg-[#FFFFFF0D]   rounded-md"
             >

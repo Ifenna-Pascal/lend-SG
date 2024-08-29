@@ -12,6 +12,8 @@ import { GiCancel } from "react-icons/gi";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import WalletConnectModal from "../modal/connect-modal";
+import { useAccount } from "wagmi";
+import WalletConnect from "@/app/providers/config/conect-wallet";
 
 const DashboardNavBar = () => {
   const pathname = usePathname();
@@ -104,13 +106,7 @@ const DashboardNavBar = () => {
                 className="w-[9px] h-[9px] md:w-[15px] md:h-[15px]"
               />
             </Button>
-            <Button
-              variant={"primary"}
-              className="w-[65px] md:w-[100px] lg:w-[134px] h-[15px] md:h-[30px] border-none rounded-[3px] lg:rounded-[5px] bg-gradient-to-r from-[#4BD5A8] to-[#007E2D] lg:h-[40px] text-white text-[5px] md:text-[10px] lg:text-[14px]"
-              onClick={() => setOpen(true)}
-            >
-              Connect Wallet
-            </Button>
+            <WalletConnect setOpen={setOpen} />
           </div>
           <div className="md:hidden">
             <button

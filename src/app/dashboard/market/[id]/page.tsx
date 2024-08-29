@@ -8,7 +8,6 @@ import MarketDetailsTable from "@/app/components/tables/MarketDetailsTable";
 
 const MarketDetailsPage = ({ params }: { params: any }) => {
   const marketId = params?.id;
-  console.log(marketId, "this is the id needed");
   return (
     <div className="max-w-[2000px] mx-auto h-[220vh] md:h-[170vh] lg:h-[80vh] xl:h-[160vh]">
       <div className=" px-4 md:px-10   bg-[#02120D] font-sora h-[193px] md:h-[280px] lg:h-[250px] xl:h-[300px]   py-[1rem] md:py-[0.5rem]   ">

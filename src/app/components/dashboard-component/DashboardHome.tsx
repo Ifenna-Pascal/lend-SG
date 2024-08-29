@@ -1,26 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import BorrowTable from "../tables/BorrowTable";
 import SupplyTable from "../tables/SupplyTable";
 import Button from "../ui/button";
-import ModalContainer from "@/app/components/modal";
-import WalletConnectModal from "@/app/components/modal/connect-modal";
 import { images } from "../../utilities/images";
-import logo from "./../../assets/images/homapage/singlelogo.svg";
+import { AppContext } from "@/app/providers/context/context-provider";
 
 const DashboardHome = () => {
   const [open, setOpen] = useState(false);
-  const [walletConnected, setWalletConnected] = useState(false);
   const [activeTab, setActiveTab] = useState("supply");
-
-  const closeModal = () => setOpen(false);
-
-  const handleWalletSelect = () => {
-    setWalletConnected(true);
-    closeModal();
-  };
+  const { marketData, loading } = useContext(AppContext);
 
   const handleTabChange = (tab: "supply" | "borrow") => {
     setActiveTab(tab);
@@ -33,7 +24,7 @@ const DashboardHome = () => {
           <h1 className="block lg:hidden text-bold text-[14px]/[20px] md:text-[28px]/[40px] lg:text-[34px]/[20px] text-white font-sora font-regular">
             Dashboard
           </h1>
-          <h1 className="text-bold text-[24px]/[30px] md:text-[34px]/[30px] mt-1 xl:mt-4 lg:text-[48px]/[80px] xl:text-[64px]/[80px] text-[#01F8AF] font-sora font-bold">
+          <h1 className="text-bold text-[24px]/[30px] md:text-[34px]/[30px] mt-1 xl:mt-4 lg:text-[48px]/[80px]  text-[#01F8AF] font-sora font-bold">
             Biturbo Market
           </h1>
         </div>
@@ -108,75 +99,94 @@ const DashboardHome = () => {
     </div>
   );
 
-  if (walletConnected) {
-    return (
-      <>
-        <Header />
-        <div className="lg:hidden flex flex-col bg-[#01291D] pt-5 px-4 md:px-10">
-          <div className="flex justify-between bg-[#012016] w-full md:w-[680px] h-[39px] mx-auto shadow-lg">
-            <Button
-              className={`${activeTab === "supply" ? "bg-[#01F8AF] text-[#012016] w-full md:w-[341px]" : "bg-[#012016] w-full md:w-[339px] text-[#01F8AF]"} rounded-[3px]`}
-              onClick={() => handleTabChange("supply")}
-            >
-              Supply
-            </Button>
-            <Button
-              className={`${activeTab === "borrow" ? "bg-[#01F8AF] text-[#012016] w-full md:w-[341px]" : "bg-[#012016] w-full md:w-[339px] text-[#01F8AF]"} rounded-[3px]`}
-              onClick={() => handleTabChange("borrow")}
-            >
-              Borrow
-            </Button>
-          </div>
-          <div className="mt-4">
-            {activeTab === "supply" ? <SupplyTable /> : <BorrowTable />}
-          </div>
-        </div>
-        <div className="hidden lg:flex justify-between gap-2 lg:gap-7 xl:gap-14 bg-[#01291D] px-4 md:px-10 mx-auto">
-          <SupplyTable />
-          <BorrowTable />
-        </div>
-      </>
-    );
-  }
-
   return (
-    <div className="max-w-[2000px] mx-auto bg-gradient-to-b from-[black] to-[#02120D] h-screen">
-      {/* Header Section */}
+    <>
       <Header />
-
-      {/* Main Content */}
-      <div className="flex flex-col bg-[#01291D] py-6 px-2 m-10 rounded-[10px] md:p-10 justify-center items-center">
-        <Image
-          src={logo}
-          width={14}
-          height={14}
-          alt="search-icon"
-          className="w-[48px] md:w-[75px] lg:w-[100px] xl:w-[136px]"
-        />
-        <p className="text-[8px]/[12px] md:text-[18px] lg:text-[24px]/[34px] mt-2 text-white font-sora font-medium xl:text-[28px]/[42px]">
-          Please, connect your wallet
-        </p>
-        <p className="w-[80%] md:w-full text-[8px]/[12px] md:text-[18px]/[20px] text-center lg:text-[20px]/[38px] mt-2 md:mt-4 lg:mt-0 text-white text-opacity-70 font-medium font-sora mb-6 xl:text-[28px]/[42px]">
-          Please connect your wallet to see your supplies, borrowings, and open
-          positions.
-        </p>
-        <Button
-          variant={"primary"}
-          className="w-[65px] md:w-[130px] lg:w-[200px] xl:w-[238px] bg-[#033426] h-[18px] md:h-[50px] lg:h-[60px] xl:h-[70px] rounded-[5px] lg:rounded-[9px] xl:rounded-[10px] text-white text-opacity-70 border-none text-[6px] md:text-[14px] lg:text-[18px] xl:text-[24px]"
-          onClick={() => setOpen(true)}
-        >
-          Connect Wallet
-        </Button>
+      <div className="lg:hidden flex flex-col bg-[#01291D] pt-5 px-4 md:px-10">
+        <div className="flex justify-between bg-[#012016] w-full md:w-[680px] h-[39px] mx-auto shadow-lg">
+          <Button
+            className={`${activeTab === "supply" ? "bg-[#01F8AF] text-[#012016] w-full md:w-[341px]" : "bg-[#012016] w-full md:w-[339px] text-[#01F8AF]"} rounded-[3px]`}
+            onClick={() => handleTabChange("supply")}
+          >
+            Supply
+          </Button>
+          <Button
+            className={`${activeTab === "borrow" ? "bg-[#01F8AF] text-[#012016] w-full md:w-[341px]" : "bg-[#012016] w-full md:w-[339px] text-[#01F8AF]"} rounded-[3px]`}
+            onClick={() => handleTabChange("borrow")}
+          >
+            Borrow
+          </Button>
+        </div>
+        <div className="mt-4">
+          {activeTab === "supply" ? (
+            <SupplyTable
+              loading={loading}
+              callback={() => {}}
+              marketData={marketData}
+            />
+          ) : (
+            <BorrowTable
+              loading={loading}
+              callback={() => {}}
+              marketData={marketData}
+            />
+          )}
+        </div>
       </div>
-
-      <ModalContainer open={open} close={closeModal}>
-        <WalletConnectModal
-          close={() => setOpen(false)}
-          onWalletSelect={handleWalletSelect}
+      <div className="hidden lg:flex justify-between gap-2 lg:gap-7 xl:gap-8 bg-[#01291D] px-4 md:px-10 mx-auto">
+        <SupplyTable
+          loading={loading}
+          marketData={marketData}
+          callback={() => {}}
         />
-      </ModalContainer>
-    </div>
+        <BorrowTable
+          loading={loading}
+          marketData={marketData}
+          callback={() => {}}
+        />
+      </div>
+    </>
   );
+  // }
+
+  // return (
+  //   <div className="max-w-[2000px] mx-auto bg-gradient-to-b from-[black] to-[#02120D] h-screen">
+  //     {/* Header Section */}
+  //     <Header />
+
+  //     {/* Main Content */}
+  //     <div className="flex flex-col bg-[#01291D] py-6 px-2 m-10 rounded-[10px] md:p-10 justify-center items-center">
+  //       <Image
+  //         src={logo}
+  //         width={14}
+  //         height={14}
+  //         alt="search-icon"
+  //         className="w-[48px] md:w-[75px] lg:w-[100px] xl:w-[136px]"
+  //       />
+  //       <p className="text-[8px]/[12px] md:text-[18px] lg:text-[24px]/[34px] mt-2 text-white font-sora font-medium xl:text-[28px]/[42px]">
+  //         Please, connect your wallet
+  //       </p>
+  //       <p className="w-[80%] md:w-full text-[8px]/[12px] md:text-[18px]/[20px] text-center lg:text-[20px]/[38px] mt-2 md:mt-4 lg:mt-0 text-white text-opacity-70 font-medium font-sora mb-6 xl:text-[28px]/[42px]">
+  //         Please connect your wallet to see your supplies, borrowings, and open
+  //         positions.
+  //       </p>
+  //       <Button
+  //         variant={"primary"}
+  //         className="w-[65px] md:w-[130px] lg:w-[200px] xl:w-[238px] bg-[#033426] h-[18px] md:h-[50px] lg:h-[60px] xl:h-[70px] rounded-[5px] lg:rounded-[9px] xl:rounded-[10px] text-white text-opacity-70 border-none text-[6px] md:text-[14px] lg:text-[18px] xl:text-[24px]"
+  //         onClick={() => setOpen(true)}
+  //       >
+  //         Connect Wallet
+  //       </Button>
+  //     </div>
+
+  //     <ModalContainer open={open} close={closeModal}>
+  //       <WalletConnectModal
+  //         close={() => setOpen(false)}
+  //         onWalletSelect={handleWalletSelect}
+  //       />
+  //     </ModalContainer>
+  //   </div>
+  // );
 };
 
 export default DashboardHome;
